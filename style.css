@@ -1,0 +1,52 @@
+@font-face {
+  font-family: LoiusCafe;
+  src: url(media/LouisGeorgeCafe.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #FFF9EC;
+  background-color: #121212;
+  font-family: LoiusCafe;
+}
+
+#logo {
+  margin-left: 20px;
+  cursor: pointer;
+  height: 55px;
+}
+
+#title {
+  color: aqua;
+  text-align: left;
+}
+
+#nav_link {
+  font-size: 18px;
+  color: #FB6376;
+  text-decoration: none;
+}
+
+#nav_bar {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+/* Change link color on hover */
+#nav_link:hover {
+  color: #00FFFF;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+#footer_table {
+  padding: 0 20px;
+  width: 100%;
+}
