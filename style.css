@@ -7,8 +7,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #FFF9EC;
-  background-color: #121212;
+  color: #121212;
+  background-color: #fff8f9;
   font-family: LoiusCafe;
 }
 
@@ -16,11 +16,6 @@
   margin-left: 20px;
   cursor: pointer;
   height: 55px;
-}
-
-#title {
-  color: aqua;
-  text-align: left;
 }
 
 #nav_link {
@@ -36,17 +31,67 @@
 
 /* Change link color on hover */
 #nav_link:hover {
-  color: #00FFFF;
+  color: #4A2040;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 0;
+  padding: 10px 0 5px;
+}
+
+#banner_slideshow {
+  overflow: hidden;
+}
+
+#banner_slideshow figure {
+  position: relative;
+  width: 500%;
+  margin: 10;
+  left: 0;
+  animation: 20s banner_slideshow infinite;
+}
+
+#banner_slideshow figure img {
+  float: left;
+  width: 20%;
 }
 
 #footer_table {
   padding: 0 20px;
   width: 100%;
 }
+
+/* ============ Animations ============ */
+
+/*slider animation*/
+@keyframes banner_slideshow {
+  0% {
+    left: 0%;
+  }
+  17% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  42% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  67% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  92% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+  }
