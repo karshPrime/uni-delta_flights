@@ -4,12 +4,19 @@
 }
 
 * {
+  font-family: LoiusCafe;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #121212;
-  background-color: #fff8f9;
-  font-family: LoiusCafe;
+  color: #4A2040;
+  background-color: #F8F7FF;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 5px;
 }
 
 #logo {
@@ -38,7 +45,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0 5px;
+  padding: 20px 20px 20px 10px;
 }
 
 #banner_slideshow {
@@ -56,6 +63,18 @@ header {
 #banner_slideshow figure img {
   float: left;
   width: 20%;
+  padding: 0 70px;
+  border-radius: 5%;
+}
+
+#quotations {
+  padding: 20px 0 50px;
+  color: #FB6376;
+  text-align: center;
+}
+
+#content_head {
+  padding: 20px 250px;
 }
 
 #footer_table {
