@@ -16,8 +16,33 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0 5px;
+  padding: 20px 20px 20px 10px;
 }
+
+hr {
+  border: 1px solid #955ac5;
+  border-radius: 5px;
+}
+
+
+#quotations {
+  padding: 20px 0;
+  color: #955ac5;
+  text-align: center;
+}
+
+#page_content {
+  padding: 20px 250px;
+}
+
+#footer_table {
+  padding: 10px 55px;
+  width: 100%;
+  font-size: medium;
+  text-decoration: none;
+}
+
+/* ============ Navigation Panel ============ */
 
 #logo {
   margin-left: 20px;
@@ -26,8 +51,8 @@ header {
 }
 
 #nav_link {
-  font-size: 18px;
-  color: #FB6376;
+  font-size: 24px;
+  color: #955ac5;
   text-decoration: none;
 }
 
@@ -36,17 +61,8 @@ header {
   padding: 0 10px;
 }
 
-/* Change link color on hover */
-#nav_link:hover {
-  color: #4A2040;
-}
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 20px 20px 10px;
-}
+/* ============ Banner Slideshow ============ */
 
 #banner_slideshow {
   overflow: hidden;
@@ -63,30 +79,46 @@ header {
 #banner_slideshow figure img {
   float: left;
   width: 20%;
-  padding: 0 70px;
+  padding: 0 50px;
   border-radius: 5%;
 }
 
-#quotations {
-  padding: 20px 0 50px;
-  color: #FB6376;
-  text-align: center;
+
+/* ============ Card Styles ============ */
+
+#all_dcards {
+  margin: 0 auto;
+  display: grid;
+  padding: 50px 70px;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
 }
 
-#content_head {
-  padding: 20px 250px;
+#single_dcard {
+  max-width: 500px;
+  border: 2px dashed #89a7a7;
+  border-radius: 80px 15px 0 0;
 }
 
-#footer_table {
-  padding: 0 20px;
+#dcard_img {
+  width: 420px;
+  border-radius: 80px 15px 0 0;
+}
+
+#dcard_content {
+  padding: 10px 10px 20px 10px;
+}
+
+#dcard_content_table {
   width: 100%;
+  font-size: 20px;
 }
 
-
-/* Custom font Sizes*/
+/* ============ Custom font Sizes ============*/
 
 h1 {
   font-size: 38px;
+  padding: 10px 0 20px;
 }
 
 h2 {
@@ -95,14 +127,23 @@ h2 {
 
 h3 {
   font-size: 28px;
+  padding-bottom: 5px;
 }
 
 p {
-  font-size: 20px;
+  font-size: 24px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 
 /* ============ Animations ============ */
+
+/* Change link color on hover */
+#nav_link:hover {
+  color: #4A2040;
+  font-weight: bold;
+}
 
 /*slider animation*/
 @keyframes banner_slideshow {
@@ -133,4 +174,4 @@ p {
   100% {
     left: -400%;
   }
-  }
+}
