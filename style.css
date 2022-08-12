@@ -38,12 +38,25 @@ footer {
   padding: 20px 250px;
 }
 
+/* ============ Tables ============ */
+
+#author_table {
+  font-size: 20px;
+  text-align: left;
+  width: 35%;
+}
+
+#author_table td {
+  padding-bottom: 10px;
+}
+
 #footer_table {
   padding: 10px 55px;
   width: 100%;
   font-size: medium;
   text-decoration: none;
 }
+
 
 /* ============ Navigation Panel ============ */
 
@@ -97,22 +110,38 @@ footer {
   justify-items: center;
 }
 
-#single_dcard {
+#all_credits {
+  margin: 0 auto;
+  display: grid;
+  padding: 0 215px;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+#single_card {
   max-width: 500px;
   border: 2px dashed #89a7a7;
-  border-radius: 80px 15px 0 0;
+  border-radius: 60px 10px 0 0;
+  margin-bottom: 50px;
+}
+
+#credit_img {
+  width: 420px;
+  height: 153px;
+  border-radius: 60px 10px 0 0;
+  object-fit: cover;
 }
 
 #dcard_img {
   width: 420px;
-  border-radius: 80px 15px 0 0;
+  border-radius: 60px 10px 0 0;
 }
 
-#dcard_content {
+#card_content {
   padding: 10px 10px 20px 10px;
 }
 
-#dcard_content_table {
+#card_content_table {
   width: 100%;
   font-size: 20px;
 }
