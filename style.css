@@ -38,16 +38,31 @@ footer {
   padding: 20px 250px;
 }
 
+#button {
+  font-size: 18px;
+  padding: 10px 50px;
+  margin-right: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #4A2040;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(3, 122, 158, 0.342)
+}
+
+
 /* ============ Tables ============ */
 
 #author_table {
   font-size: 20px;
   text-align: left;
-  width: 35%;
+  width: 85%;
 }
 
-#author_table td {
-  padding-bottom: 10px;
+#author_table img {
+  height: 300px;
+  border: 2px dashed #89a7a7;
+  border-radius: 60px 1px 60px 1px;
 }
 
 #footer_table {
