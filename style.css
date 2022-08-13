@@ -117,15 +117,7 @@ footer {
 
 /* ============ Card Styles ============ */
 
-#all_dcards {
-  margin: 0 auto;
-  display: grid;
-  padding: 50px 70px;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-}
-
-#all_credits {
+#all_cards {
   margin: 0 auto;
   display: grid;
   padding: 0 215px;
