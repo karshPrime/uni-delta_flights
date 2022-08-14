@@ -72,6 +72,14 @@ footer {
   text-decoration: none;
 }
 
+.left_intend {
+  text-align: left;
+}
+
+.right_intend {
+  text-align: right;
+}
+
 
 /* ============ Navigation Panel ============ */
 
@@ -81,13 +89,13 @@ footer {
   height: 55px;
 }
 
-#nav_link {
+.nav_link {
   font-size: 24px;
   color: #955ac5;
   text-decoration: none;
 }
 
-#nav_bar {
+.nav_bar {
   display: inline-block;
   padding: 0 10px;
 }
@@ -125,30 +133,30 @@ footer {
   justify-items: center;
 }
 
-#single_card {
+.single_card {
   max-width: 500px;
   border: 2px dashed #89a7a7;
   border-radius: 60px 10px 0 0;
   margin-bottom: 50px;
 }
 
-#credit_img {
+.credit_img {
   width: 420px;
   height: 153px;
   border-radius: 60px 10px 0 0;
   object-fit: cover;
 }
 
-#dcard_img {
+.dcard_img {
   width: 420px;
   border-radius: 60px 10px 0 0;
 }
 
-#card_content {
+.card_content {
   padding: 10px 10px 20px 10px;
 }
 
-#card_content_table {
+.card_content_table {
   width: 100%;
   font-size: 20px;
 }
