@@ -187,7 +187,7 @@ p {
 /* ============ Animations ============ */
 
 /* Change link color on hover */
-#nav_link:hover {
+.nav_link:hover {
   color: #4A2040;
   font-weight: bold;
 }
