@@ -38,7 +38,10 @@ footer {
   padding: 20px 250px;
 }
 
+/* ============ Buttons ============ */
+
 .button {
+  border: 1px solid #ff8da1;
   font-size: 18px;
   padding: 10px 50px;
   margin-right: 10px;
@@ -50,6 +53,14 @@ footer {
   box-shadow: 0 0 10px rgba(3, 122, 158, 0.342)
 }
 
+/* Change text size and color on hover */
+.button:hover {
+  background-color: #ffc0cb;
+}
+
+.button:active {
+  background-color: #ff748c;
+}
 
 /* ============ Tables ============ */
 
@@ -61,7 +72,7 @@ footer {
 
 #author_table img {
   height: 300px;
-  border: 2px dashed #89a7a7;
+  border: 2px dashed #ff8da1;
   border-radius: 60px 1px 60px 1px;
 }
 
@@ -89,15 +100,22 @@ footer {
   height: 55px;
 }
 
+.nav_bar {
+  display: inline-block;
+}
+
 .nav_link {
   font-size: 24px;
   color: #955ac5;
   text-decoration: none;
+  padding: 0 10px;
 }
 
-.nav_bar {
-  display: inline-block;
-  padding: 0 10px;
+/* Change link color and weight on hover */
+.nav_link:hover {
+  color: #4A2040;
+  background-color: #fcf4f5;
+  border-radius: 25px;
 }
 
 
@@ -109,7 +127,7 @@ footer {
 
 #banner_slideshow figure {
   position: relative;
-  width: 500%;
+  width: 500%; susfetch-git 
   left: 0;
   animation: 20s banner_slideshow infinite;
 }
@@ -121,20 +139,49 @@ footer {
   border-radius: 5%;
 }
 
+/*slider animation*/
+@keyframes banner_slideshow {
+  0% {
+    left: 0%;
+  }
+  17% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  42% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  67% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  92% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
 
 /* ============ Card Styles ============ */
 
 #all_cards {
-  margin: 0 auto;
   display: grid;
-  padding: 0 215px;
+  padding: 0 205px;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
 }
 
 .single_card {
-  max-width: 500px;
-  border: 2px dashed #89a7a7;
+  border: 2px dashed #ff8da1;
   border-radius: 60px 10px 0 0;
   margin-bottom: 50px;
 }
@@ -143,7 +190,7 @@ footer {
   width: 420px;
   height: 153px;
   border-radius: 60px 10px 0 0;
-  object-fit: cover;
+  object-fit:cover;
 }
 
 .dcard_img {
@@ -180,44 +227,4 @@ p {
   font-size: 24px;
   text-align: justify;
   text-justify: inter-word;
-}
-
-
-/* ============ Animations ============ */
-
-/* Change link color on hover */
-.nav_link:hover {
-  color: #4A2040;
-  font-weight: bold;
-}
-
-/*slider animation*/
-@keyframes banner_slideshow {
-  0% {
-    left: 0%;
-  }
-  17% {
-    left: 0%;
-  }
-  25% {
-    left: -100%;
-  }
-  42% {
-    left: -100%;
-  }
-  50% {
-    left: -200%;
-  }
-  67% {
-    left: -200%;
-  }
-  75% {
-    left: -300%;
-  }
-  92% {
-    left: -300%;
-  }
-  100% {
-    left: -400%;
-  }
 }
