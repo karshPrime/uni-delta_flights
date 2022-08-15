@@ -110,7 +110,6 @@ footer {
 #banner_slideshow figure {
   position: relative;
   width: 500%;
-  margin: 10;
   left: 0;
   animation: 20s banner_slideshow infinite;
 }
