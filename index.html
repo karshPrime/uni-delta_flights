@@ -11,7 +11,9 @@
     </head>
 
     <body>
+        <!--Navigation panel-->
         <header>
+            <!--Website Logo; redirects to homepage-->
             <a href="index.html"><img src="images/logo.png" alt="Delta Logo" id="logo"></a>
             <nav>
                 <ul>
@@ -25,7 +27,7 @@
         </header>
 
         
-        <!-- Top animated banner -->
+        <!--Top animated banner-->
         <!--Both Article and Section starts with a Heading; hence using div-->
         <div id="banner_slideshow">
             <figure>
@@ -36,34 +38,43 @@
                 <img src="images/pexels-oleksandr-pidvalnyi-1004584.jpg" alt="slider-image_1"> 
             </figure>
         </div>
-        <!--Page Data-->
+
+        
+        <!--Page Data in text; i.e. exlcuding images and tables-->
         <section id="page_content">
             <h2 id="quotations">"Booking flights have never been any easier...</h2>
             <h1>Explore Destinations</h1>
             <p>Not sure where to go? Browse through our special offers just for you!</p>
         </section><br><br>
+        
+        
         <!--Destination cards-->
+        <!--Card type layout for different suggested destinations-->
         <div id="destination_cards">
-            <div class="single_destination_card"> 
+
+            <!--A card for a destination; every destination has its own div-->
+            <div class="single_destination_card">
+                <!--using table for organising data in the cards-->
                 <table class="destination_content">
                     <tr>
-                        <th rowspan="5">
+                        <th rowspan="5"> <!--Card side-image; destination image-->
                             <img src="images/pexels-ingo-joseph-109629.jpg" alt="Berliner Fernsehturm" class="destination_img">
                         </th>
-                        <td colspan="3">
+                        <td colspan="3"> <!--Destination name-->
                             <h2><strong>Berlin, Germany</strong></h2>
                         </td>
                     </tr>
-                    <tr>
+                    <tr> <!--Air route with airlines-->
                         <td colspan="3"><p>MEL-BER with Singapore Airlines</p></td>
                     </tr>
-                    <tr>
+                    <tr> <!--other mislanious information about the trip-->
                         <td class="air_stop"><p><strong>1 Stop:</strong> Moscow Airport </p></td>
                         <td><p>✈️ <strong>ETA: </strong>16hrs 28mins</p></td>
                         <td><p>🧳25Kg</p></td>
                     </tr>
                     <tr>
                         <td><h3>A$499.00</h3></td>
+                        <!--select option to book tickets; just prototype-->
                         <td colspan="2">
                             <select class="seats_select_main">
                                 <option value="">< Reserve Seats ></option>
@@ -76,6 +87,7 @@
                 </table>
             </div>
 
+            <!--card for destination 2: hawaii-->
             <div class="single_destination_card"> 
                 <table class="destination_content">
                     <tr>
@@ -108,7 +120,7 @@
                 </table>
             </div>
 
-
+            <!--card for destination 3: paris-->
             <div class="single_destination_card"> 
                 <table class="destination_content">
                     <tr>
@@ -142,6 +154,8 @@
             </div>
         </div>
 
+
+        <!--Page footer; contains course code/title and hyperlink to swinburne.edu.au-->
         <footer>
             <hr>
             <table ID="footer_table">
