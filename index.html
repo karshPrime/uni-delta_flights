@@ -24,6 +24,7 @@
             </nav>
         </header>
 
+        
         <!-- Top animated banner -->
         <!--Both Article and Section starts with a Heading; hence using div-->
         <div id="banner_slideshow">
@@ -35,59 +36,109 @@
                 <img src="images/pexels-oleksandr-pidvalnyi-1004584.jpg" alt="slider-image_1"> 
             </figure>
         </div>
-
         <!--Page Data-->
         <section id="page_content">
             <h2 id="quotations">"Booking flights have never been any easier...</h2>
             <h1>Explore Destinations</h1>
             <p>Not sure where to go? Browse through our special offers just for you!</p>
         </section><br><br>
-
         <!--Destination cards-->
-        <div id="all_cards">
-            <div class="single_card"> 
-                <img src="images/pexels-ingo-joseph-109629.jpg" alt="Berliner Fernsehturm" class="dcard_img">
-                <section class="card_content">
-                    <h3><strong>Berlin, Germany</strong></h3>
-                    <table class="card_content_table">
-                        <tr>
-                            <td class="left_intend">MEL-BER with Singapore Airlines</td>
-                            <td class="right_intend"><strong>1 Stop</strong></td>
-                        </tr>
-                    </table>
-                    <br>
-                    <h3>A$499.00*</h3>
-                </section>
+        <div id="destination_cards">
+            <div class="single_destination_card"> 
+                <table class="destination_content">
+                    <tr>
+                        <th rowspan="5">
+                            <img src="images/pexels-ingo-joseph-109629.jpg" alt="Berliner Fernsehturm" class="destination_img">
+                        </th>
+                        <td colspan="3">
+                            <h2><strong>Berlin, Germany</strong></h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><p>MEL-BER with Singapore Airlines</p></td>
+                    </tr>
+                    <tr>
+                        <td class="air_stop"><p><strong>1 Stop:</strong> Moscow Airport </p></td>
+                        <td><p>✈️ <strong>ETA: </strong>16hrs 28mins</p></td>
+                        <td><p>🧳25Kg</p></td>
+                    </tr>
+                    <tr>
+                        <td><h3>A$499.00</h3></td>
+                        <td colspan="2">
+                            <select class="seats_select_main">
+                                <option value="">< Reserve Seats ></option>
+                                <option value="seat_1">1</option>
+                                <option value="seat_2">2</option>
+                                <option value="seat_3">3</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
             </div>
 
-            <div class="single_card"> 
-                <img src="images/pexels-jess-loiterton-4321085.jpg" alt="Hawaii Beach" class="dcard_img">
-                <section class="card_content">
-                    <h3><strong>Hawaii, Western United States</strong></h3>
-                    <table class="card_content_table">
-                        <tr>
-                            <td class="left_intend">MEL-HNL with Jetstar Airways</td>
-                            <td class="right_intend"><strong>1 Stop</strong></td>
-                        </tr>
-                    </table>
-                    <br>
-                    <h3>A$549.00*</h3>
-                </section>
+            <div class="single_destination_card"> 
+                <table class="destination_content">
+                    <tr>
+                        <th rowspan="5">
+                            <img src="images/pexels-jess-loiterton-4321085.jpg" alt="Hawaii Beach" class="destination_img">
+                        </th>
+                        <td colspan="3">
+                            <h2><strong>Hawaii, Western United States</strong></h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><p>MEL-HNL with Jetstar Airways</p></td>
+                    </tr>
+                    <tr>
+                        <td class="air_stop"><p><strong>No Stops</strong></p></td>
+                        <td><p>✈️ <strong>ETA: </strong>16hrs 28mins</p></td>
+                        <td><p>🧳12Kg</p></td>
+                    </tr>
+                    <tr>
+                        <td><h3>A$549.00</h3></td>
+                        <td colspan="2">
+                            <select class="seats_select_main">
+                                <option value="">< Reserve Seats ></option>
+                                <option value="seat_1">1</option>
+                                <option value="seat_2">2</option>
+                                <option value="seat_3">3</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
             </div>
 
-            <div class="single_card"> 
-                <img src="images/pexels-dimitri-kuliuk-1488315.jpg" alt="Eiffel Tower" class="dcard_img">
-                <section class="card_content">
-                    <h3><strong>Paris, France</strong></h3>
-                    <table class="card_content_table">
-                        <tr>
-                            <td class="left_intend">MEL-CDG with British Airways</td>
-                            <td class="right_intend"><strong>2 Stops</strong></td>
-                        </tr>
-                    </table>
-                    <br>
-                    <h3>A$499.00*</h3>
-                </section>
+
+            <div class="single_destination_card"> 
+                <table class="destination_content">
+                    <tr>
+                        <th rowspan="5">
+                            <img src="images/pexels-dimitri-kuliuk-1488315.jpg" alt="Eiffel Tower" class="destination_img">
+                        </th>
+                        <td colspan="3">
+                            <h2><strong>Paris, France</strong></h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><p>MEL-CDG with British Airways</p></td>
+                    </tr>
+                    <tr>
+                        <td class="air_stop"><p><strong>1 Stop:</strong> Dubai Airport</p></td>
+                        <td><p>✈️ <strong>ETA: </strong>16hrs 28mins</p></td>
+                        <td><p>🧳20Kg</p></td>
+                    </tr>
+                    <tr>
+                        <td><h3>A$499.00</h3></td>
+                        <td colspan="2">
+                            <select class="seats_select_main">
+                                <option value="">< Reserve Seats ></option>
+                                <option value="seat_1">1</option>
+                                <option value="seat_2">2</option>
+                                <option value="seat_3">3</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
 
