@@ -113,42 +113,17 @@ footer {
 
 
 /* ================= Dropdown =============== */
- /* Dropdown Button */
-.seats_button {
+.seats_select {
+  box-shadow: #4A2040;;
+  appearance: none;
   background-color: #ffc0cb;
   font-size: 16px;
-  margin: 5px;
+  margin: 2px;
   padding: 2px 10px;
   border: none;
   border-radius: 5px;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.seats_available {
-  display: none;
-  position: absolute;
-  min-width: 135px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.seats_available a {
-  color: black;
-  padding: 12px 10px;
-  display: block;
+  box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.2);
   text-align: center;
-  text-decoration: none;
-}
-
-/* Change color of dropdown links on hover */
-.seats_available a:hover {
-  background-color: #ffc0cb;
-}
-
-/* Show the dropdown menu on hover */
-.seats:hover .seats_available {
-  display: block;
 }
 
 
