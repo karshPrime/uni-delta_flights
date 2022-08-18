@@ -1,7 +1,12 @@
+/* ===================== Font ===================== */
+/* Importing external font from local storage*/
 @font-face {
   font-family: LoiusCafe;
   src: url(LouisGeorgeCafe.ttf);
 }
+
+
+/* =================== Defaults =================== */
 
 * {
   font-family: LoiusCafe;
@@ -9,77 +14,84 @@
   margin: 0;
   padding: 0;
   color: #4A2040;
-  background-color: #F8F7FF;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 20px 20px 10px;
+  padding: 1em;
 }
 
 hr {
-  border: 1px solid #955ac5;
-  border-radius: 5px;
+  border: 0.1em solid #955ac5;
 }
 
 footer {
-  padding-top: 50px;
+  padding-top: 5em;
+}
+
+/*terms and conditions*/
+.tnc {
+  font-size: 1.2em;
+  color: #ff0000;
 }
 
 #quotations {
-  padding: 20px 0;
+  padding: 0.8em 0;
   color: #955ac5;
   text-align: center;
 }
 
 #page_content {
-  padding: 20px 250px;
+  padding: 1.3em 26em;
 }
 
-/* ============ Buttons ============ */
+
+/* ==================== Buttons =================== */
 
 .button {
-  border: 1px solid #ff8da1;
-  font-size: 18px;
-  padding: 10px 50px;
-  margin-right: 10px;
+  border: 0.1em solid #00FFFF;
+  padding: 0.2em 1.4em;
+  margin-right: 1em;
   text-align: center;
   text-decoration: none;
   color: #4A2040;
-  border-radius: 5px;
+  border-radius: 0.2em;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(3, 122, 158, 0.342)
+  box-shadow: 0 0 1em rgba(3, 122, 158, 0.342)
 }
 
-/* Change text size and color on hover */
+/* Change background color on hover */
 .button:hover {
-  background-color: #ffc0cb;
+  background-color: #00FFFF;
 }
 
+/* Gets even darker when clicked; buttons*/
 .button:active {
-  background-color: #ff748c;
+  background-color: #2428ff;
 }
 
-/* ============ Tables ============ */
+/* ==================== Tables ==================== */
 
 #author_table {
-  font-size: 20px;
+  font-size: 1.5em;
   text-align: left;
-  width: 85%;
+  width: 100%;
 }
 
 #author_table img {
-  height: 300px;
-  border: 2px dashed #ff8da1;
-  border-radius: 60px 1px 60px 1px;
+  height: 14em;
+  border: 0.1em dashed #00FFFF;
+  border-radius: 2.5em 0.1em;
+  object-fit: fill;
 }
 
 #footer_table {
-  padding: 10px 55px;
+  padding: 0.5em 3em;
   width: 100%;
   font-size: medium;
+  /* for swinburne.edu hyperlink*/
   text-decoration: none;
 }
 
@@ -95,44 +107,55 @@ footer {
   text-align: center;
 }
 
+/*last minute flight book table*/
 #discount_flights {
   border-collapse: collapse;
-  border: 1px solid #ff8da1;
+  border: 0.1em solid #00FFFF;
   text-align: left;
+  width: 100%;
 }
 
 #discount_flights th {
-  background-color: #ff748c;
+  background-color: #00ffff;
   color: white;
-  font-size: 18px;
+  font-size: 1.2em;
 }
 
-#discount_flights td, th {
-  padding: 10px 15px 10px;
+#discount_flights td, #discount_flights th {
+  padding: 0.7em 0.6em 0.7em;
 }
 
 
-/* ================= Dropdown =============== */
+/* ==================== Dropdown ================== */
 .seats_select {
-  box-shadow: #4A2040;;
-  
-  background-color: #ffc0cb;
-  font-size: 16px;
-  margin: 2px;
-  padding: 2px 10px;
+  background-color: #00FFFF;
+  font-size: 1em;
+  margin: 0.3em;
+  padding: 0.3em 0.7em;
   border: none;
-  border-radius: 5px;
-  box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.2);
+  border-radius: 0.3em;
+  box-shadow: 0 0.3em 0.4em 0 rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.seats_select_main {
+  appearance: none;
+  background-color: #c4ffff;
+  font-size: 1.3em;
+  padding: 0.3em;
+  border: none;
+  border-radius: 1.2em;
+  box-shadow: 0 0.3em 0.4em 0 rgba(0,0,0,0.2);
   text-align: center;
 }
 
 
-/* ============ Navigation Panel ============ */
+/* =============== Navigation Panel =============== */
 
 #logo {
-  margin-left: 20px;
+  margin-left: 1.6em;
   cursor: pointer;
-  height: 55px;
+  height: 3.4em;
 }
 
 .nav_bar {
@@ -140,21 +163,21 @@ footer {
 }
 
 .nav_link {
-  font-size: 24px;
+  font-size: 1.5em;
   color: #955ac5;
   text-decoration: none;
-  padding: 0 10px;
+  padding: 0 0.4em;
 }
 
 /* Change link color and weight on hover */
 .nav_link:hover {
   color: #4A2040;
-  background-color: #fcf4f5;
-  border-radius: 25px;
+  background-color: #ebffff;
+  border-radius: 0.5em;
 }
 
 
-/* ============ Banner Slideshow ============ */
+/* =============== Banner Slideshow =============== */
 
 #banner_slideshow {
   overflow: hidden;
@@ -162,7 +185,7 @@ footer {
 
 #banner_slideshow figure {
   position: relative;
-  width: 500%; susfetch-git 
+  width: 500%;
   left: 0;
   animation: 20s banner_slideshow infinite;
 }
@@ -170,7 +193,7 @@ footer {
 #banner_slideshow figure img {
   float: left;
   width: 20%;
-  padding: 0 50px;
+  padding: 0 4em;
   border-radius: 5%;
 }
 
@@ -206,60 +229,82 @@ footer {
 }
 
 
-/* ============ Card Styles ============ */
+/* ================== Card Styles ================= */
 
-#all_cards {
+#credit_cards {
   display: grid;
-  padding: 0 205px;
+  padding: 0 26em;
   grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
+  justify-items:first baseline;
 }
 
-.single_card {
-  border: 2px dashed #ff8da1;
-  border-radius: 60px 10px 0 0;
-  margin-bottom: 50px;
+.single_credit_card {
+  border: 0.2em dashed #00FFFF;
+  border-radius: 3em 0.5em 0 0;
+  width: 22em;
+  margin: 0 1em 2em 0;
 }
 
 .credit_img {
-  width: 420px;
-  height: 153px;
-  border-radius: 60px 10px 0 0;
-  object-fit:cover;
+  width: 21.6em;
+  height: 12em;
+  border-radius: 3em 0.5em 0 0;
+  object-fit: fill;
 }
 
-.dcard_img {
-  width: 420px;
-  border-radius: 60px 10px 0 0;
+#destination_cards {
+  display: grid;
+  padding: 0 26em;
+  justify-items:first baseline;
 }
 
-.card_content {
-  padding: 10px 10px 20px 10px;
+.single_destination_card {
+  border: 0.3em dashed #00FFFF;
+  border-radius: 0 5em 0.5em 0;
+  width: 70em;
+  margin: 0 1em 2em 0;
+  background-color: ;
 }
 
-.card_content_table {
-  width: 100%;
-  font-size: 20px;
+.destination_img {
+  width: 19em;
+  border-radius: 0 2em 0 0;
 }
 
-/* ============ Custom font Sizes ============*/
+.destination_content td {
+  padding-left: 2.5em;
+}
+
+.credit_details {
+  padding: 0.7em;
+}
+
+.air_stop {
+  width: 21em;
+}
+
+
+/* =============== Custom font Sizes ===============*/
 
 h1 {
-  font-size: 38px;
+  color: #000000;
+  font-size: 3em;
   padding: 10px 0 20px;
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 2.5em;
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 2em;
   padding-bottom: 5px;
 }
 
 p {
-  font-size: 24px;
+  font-size: 1.5em;
   text-align: justify;
   text-justify: inter-word;
 }
+
+/* ================================================ */
