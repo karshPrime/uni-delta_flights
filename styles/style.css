@@ -91,6 +91,26 @@ footer {
   text-align: right;
 }
 
+#discount_flights {
+  border-collapse: collapse;
+  border: 1px solid #ff8da1;
+  text-align: left;
+}
+
+#discount_flights th {
+  background-color: #ff748c;
+  color: white;
+  font-size: 18px;
+}
+
+#discount_flights td, th {
+  padding: 10px 15px 10px;
+}
+
+.serial_num {
+  text-align: center;
+}
+
 
 /* ============ Navigation Panel ============ */
 
