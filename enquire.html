@@ -24,6 +24,69 @@
             </nav>
         </header>
 
+        <section id="page_content">
+            <h1>How can we be of your serivce today?</h1>
+
+            <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+                <fieldset>
+                    <legend>About you (Optional)</legend>
+                    <p>
+                        <label for="fname">Given Name: </label>
+                        <input type="text" id="gname" pattern="[A-Za-z].{,15}" placeholder="Joe">
+
+                        <label for="fname">Family Name: </label>
+                        <input type="text" id="fname" pattern="[A-Za-z].{,15}" placeholder="Smith">
+                    </p>
+                    <p>
+                        <label for="email">Email: </label>
+                        <input type="text" id="email" placeholder="joesmith@deltaflights.com">
+                    </p>
+                    <br>
+                    <p>
+                        Are you an existing member?
+                    </p>
+                    <input type="radio" name="is_member_no" id="is_member_no">
+                    <label for="is_member_no" class="form_option">No(/rather not disclose)</label>
+                    
+                    <input type="radio" name="is_member_yes" id="is_member_yes">
+                    <label for="is_member_yes" class="form_option">Yes</label>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Enquire type*</legend>
+                    <p>
+                        Please specify the content type. Select all that apply.
+                    </p>
+                    <input type="checkbox" name="content_type" id="content_report">
+                    <label for="content_report" class="form_option">Make a Complain</label>
+                    
+                    <input type="checkbox" name="content_type" id="content_suggestion">
+                    <label for="content_suggestion" class="form_option">Suggest an idea</label>
+                    
+                    <input type="checkbox" name="content_type" id="content_enquire">
+                    <label for="content_enquire" class="form_option">Get clarification</label>
+                    
+                    <input type="checkbox" name="content_type" id="content_info">
+                    <label for="content_info" class="form_option">Request more info</label>
+                    
+                    <input type="checkbox" name="content_type" id="content_other">
+                    <label for="content_other" class="form_option">Other</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your message*</legend>
+                    <p>
+                        Please Enter your message bellow:
+                    </p>
+                    <textarea name="message" id="issue_description" rows="7"
+                        placeholder="Write description of your problem here..."> 
+                    </textarea>
+                </fieldset>
+                <input class="form_button" type="submit" value="Submit">
+                <input class="form_button" type="reset" value="Clear">
+            </form>
+        </section>
+
         <footer>
             <hr>
             <table ID="footer_table">

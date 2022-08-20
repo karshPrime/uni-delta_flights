@@ -48,6 +48,84 @@ footer {
 }
 
 
+/* ===================== Form ===================== */
+
+form fieldset {
+  border: 0.2em dotted #00FFFF;
+  border-radius: 0 2.5em 0.5em 0;
+  padding-inline: 1em;
+  padding-top: 0.7em;
+  padding-bottom: 2em;
+  margin-bottom: 3em;
+}
+
+form legend {
+  font-size: 1.3em;
+  color: #955ac5; /*same as navigation menu*/
+}
+
+form p {
+  text-align: justify;
+  padding-bottom: 0.6em;
+  padding-top: 0.3em;
+}
+
+form input[type=text] {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #00FFFF;
+  
+  height: 26px;
+  padding: 0.5em;
+  margin-left: 0.2em;
+  margin-right: 2.5em;
+
+  font-size: 0.8em;
+}
+
+form input[id=email] {
+  width: 82.7%;
+}
+
+form input[type=text]:focus {
+  border-color: #000;
+}
+
+form textarea {
+  border: 0.1em solid #00FFFF;
+  width: 100%;
+  resize: none;
+  padding: 0.5em;
+}
+
+.form_option {
+  padding-right: 2em;
+  font-size: 20px;
+  columns: #6082B6;
+}
+
+.form_button {
+  font-size: 1.2em;
+  padding: 0.2em 0.7em 0.2em 0.7em;
+  margin-right: 0.5em;
+  background-color: #ffffff;
+  border: 0.1em solid #000;
+  border-radius: 5em;
+}
+
+.form_button[type=submit]:hover {
+  background-color: #00ffff;
+  border: 0.1em solid #00FFFF;
+  color: white;
+}
+
+.form_button[type=reset]:hover {
+  background-color: #ff0000;
+  border: 0.1em solid #ff0000;
+  color: white;
+}
+
+
 /* ==================== Buttons =================== */
 
 .button {
