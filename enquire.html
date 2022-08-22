@@ -43,19 +43,24 @@
                     </p>
                     <br>
                     <p>
-                        Are you an existing member?
+                        Are you an registered member?*
                     </p>
-                    <input type="radio" name="is_member_no" id="is_member_no">
-                    <label for="is_member_no" class="form_option">No(/rather not disclose)</label>
                     
-                    <input type="radio" name="is_member_yes" id="is_member_yes">
+                    <input type="radio" name="is_member" id="is_member_yes">
                     <label for="is_member_yes" class="form_option">Yes</label>
+
+                    <input type="radio" name="is_member" id="is_member_no">
+                    <label for="is_member_no" class="form_option">No</label>
+                    
+                    <!--default option-->
+                    <input type="radio" name="is_member" id="is_member_anon" checked>
+                    <label for="is_member_anon" class="form_option">Rather not disclose</label>
                 </fieldset>
                 
                 <fieldset>
-                    <legend>Enquire type*</legend>
+                    <legend>Enquire type</legend>
                     <p>
-                        Please specify the content type. Select all that apply.
+                        Please specify the content type. Select all that apply.*
                     </p>
                     <input type="checkbox" name="content_type" id="content_report">
                     <label for="content_report" class="form_option">Make a Complain</label>
@@ -74,9 +79,9 @@
                 </fieldset>
 
                 <fieldset>
-                    <legend>Your message*</legend>
+                    <legend>Your message</legend>
                     <p>
-                        Please Enter your message bellow:
+                        Please Enter your message bellow:*
                     </p>
                     <textarea name="message" id="issue_description" rows="7"
                         placeholder="Write description of your problem here..."> 
