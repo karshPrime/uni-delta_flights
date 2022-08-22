@@ -222,11 +222,11 @@ p {
 
 /* ===================== aside =====================*/
 
-aside {
+#explore {
   float: left;
 }
 
-#side_image {
+#explore_img {
   width: 35%;
   margin-left: 5%;
   padding: 1%;
@@ -234,11 +234,39 @@ aside {
   border-radius: 2.5em;
 }
 
-aside li {
+#explore li {
   font-size: 1.3rem;
   padding-left: 1%;
   margin-left: 5%;
   padding-top: 0.3rem;
+}
+
+#author_head {
+  float: left;
+  width: 15%;
+  min-width: 10em;
+  font-weight: bold;
+}
+
+#author_head li, #author_details li {
+  display: block;
+  font-size: 1.7rem;
+  padding-bottom: 1.5rem;
+  text-decoration: none;
+}
+
+#author_details {
+  float: left;
+  width: 40%;
+  min-width: fit-content;
+}
+
+#author_img {
+  width: 25%;
+  padding: 0.5%;
+  margin-inline: 5%;
+  border: 0.3em dashed #00FFFF;
+  border-radius: 2.5em;
 }
 
 
@@ -350,19 +378,6 @@ form textarea {
 
 /* ==================== Tables ==================== */
 
-#author_table {
-  font-size: 1.5em;
-  text-align: left;
-  width: 100%;
-}
-
-#author_table img {
-  height: 14em;
-  border: 0.1em dashed #00FFFF;
-  border-radius: 2.5em 0.1em;
-  object-fit: fill;
-}
-
 #footer_table {
   padding: 0.5em 3em;
   width: 100%;
@@ -403,6 +418,7 @@ form textarea {
 
 
 /* ==================== Dropdown ================== */
+
 .seats_select {
   background-color: #00FFFF;
   font-size: 1em;
