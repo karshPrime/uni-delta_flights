@@ -48,6 +48,178 @@ footer {
 }
 
 
+
+/* =============== Custom font Sizes ===============*/
+
+h1 {
+  color: #000000;
+  font-size: 3rem;
+  padding: 3% 0 1.5%;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+  padding-bottom: 5px;
+}
+
+p {
+  font-size: 1.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+
+/* =============== Navigation Panel =============== */
+
+#logo {
+  margin-left: 1.6%;
+  cursor: pointer;
+  height: 3.4em;
+}
+
+.nav_bar {
+  display: inline-block;
+}
+
+.nav_link {
+  font-size: 120%;
+  color: #955ac5;
+  text-decoration: none;
+  padding: 0 0.4em;
+}
+
+/* Change link color and weight on hover */
+.nav_link:hover {
+  color: #4A2040;
+  background-color: #ebffff;
+  border-radius: 0.5em;
+}
+
+
+/* =============== Banner Slideshow =============== */
+
+#banner_slideshow {
+  overflow: hidden;
+}
+
+#banner_slideshow figure {
+  position: relative;
+  width: 500%;
+  left: 0;
+  animation: 20s banner_slideshow infinite;
+}
+
+#banner_slideshow img {
+  float: left;
+  width: 18%;
+  margin-inline: 1%;
+  padding: 0.1%;
+  border-radius: 2.5em;
+  border: 0.2em dashed #00FFFF;
+}
+
+/*slider animation*/
+@keyframes banner_slideshow {
+  0% {
+    left: 0%;
+  }
+  17% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  42% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  67% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  92% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
+
+#cover_img {
+  margin: 0 18%;
+  width: 64%;
+  padding: 0.5%;
+  border: 0.2em dashed #00FFFF;
+  border-radius: 2.5em;
+}
+
+
+/* ================== Card Styles ================= */
+
+#credit_cards {
+  display: grid;
+  padding: 0 20%;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items:first baseline;
+}
+
+.single_credit_card {
+  border: 0.2em dashed #00FFFF;
+  border-radius: 3em 0.5em 0 0;
+  width: 92%;
+  margin: 0 1% 10% 0;
+}
+
+.credit_img {
+  width: 100%;
+  height: 10em;
+  border-radius: 3em 0.5em 0 0;
+  object-fit: fill;
+}
+
+#destination_cards {
+  padding-inline: 20%;
+  justify-items:first baseline;
+}
+
+.single_destination_card {
+  border: 0.3em dashed #00FFFF;
+  border-radius: 0 5em 0.5em 0;
+  width: 100%;
+  margin-bottom: 3%;
+}
+
+.destination_img {
+  width: 19em;
+  border-radius: 0 2em 0 0;
+}
+
+.destination_content a {
+  text-decoration: none;
+}
+
+.destination_content td {
+  padding-left: 2.5em;
+}
+
+.credit_details {
+  padding: 0.7em;
+}
+
+.air_stop {
+  width: 21em;
+}
+
+
 /* ===================== aside =====================*/
 
 aside {
@@ -251,177 +423,6 @@ form textarea {
   border-radius: 1.2em;
   box-shadow: 0 0.3em 0.4em 0 rgba(0,0,0,0.2);
   text-align: center;
-}
-
-
-/* =============== Navigation Panel =============== */
-
-#logo {
-  margin-left: 1.6%;
-  cursor: pointer;
-  height: 3.4em;
-}
-
-.nav_bar {
-  display: inline-block;
-}
-
-.nav_link {
-  font-size: 120%;
-  color: #955ac5;
-  text-decoration: none;
-  padding: 0 0.4em;
-}
-
-/* Change link color and weight on hover */
-.nav_link:hover {
-  color: #4A2040;
-  background-color: #ebffff;
-  border-radius: 0.5em;
-}
-
-
-/* =============== Banner Slideshow =============== */
-
-#banner_slideshow {
-  overflow: hidden;
-}
-
-#banner_slideshow figure {
-  position: relative;
-  width: 500%;
-  left: 0;
-  animation: 20s banner_slideshow infinite;
-}
-
-#banner_slideshow img {
-  float: left;
-  width: 18%;
-  margin-inline: 1%;
-  padding: 0.1%;
-  border-radius: 2.5em;
-  border: 0.2em dashed #00FFFF;
-}
-
-/*slider animation*/
-@keyframes banner_slideshow {
-  0% {
-    left: 0%;
-  }
-  17% {
-    left: 0%;
-  }
-  25% {
-    left: -100%;
-  }
-  42% {
-    left: -100%;
-  }
-  50% {
-    left: -200%;
-  }
-  67% {
-    left: -200%;
-  }
-  75% {
-    left: -300%;
-  }
-  92% {
-    left: -300%;
-  }
-  100% {
-    left: -400%;
-  }
-}
-
-
-#cover_img {
-  margin: 0 18%;
-  width: 64%;
-  padding: 0.5%;
-  border: 0.2em dashed #00FFFF;
-  border-radius: 2.5em;
-}
-
-
-/* ================== Card Styles ================= */
-
-#credit_cards {
-  display: grid;
-  padding: 0 20%;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items:first baseline;
-}
-
-.single_credit_card {
-  border: 0.2em dashed #00FFFF;
-  border-radius: 3em 0.5em 0 0;
-  width: 92%;
-  margin: 0 1% 10% 0;
-}
-
-.credit_img {
-  width: 100%;
-  height: 10em;
-  border-radius: 3em 0.5em 0 0;
-  object-fit: fill;
-}
-
-#destination_cards {
-  padding-inline: 20%;
-  justify-items:first baseline;
-}
-
-.single_destination_card {
-  border: 0.3em dashed #00FFFF;
-  border-radius: 0 5em 0.5em 0;
-  width: 100%;
-  margin-bottom: 3%;
-}
-
-.destination_img {
-  width: 19em;
-  border-radius: 0 2em 0 0;
-}
-
-.destination_content a {
-  text-decoration: none;
-}
-
-.destination_content td {
-  padding-left: 2.5em;
-}
-
-.credit_details {
-  padding: 0.7em;
-}
-
-.air_stop {
-  width: 21em;
-}
-
-
-/* =============== Custom font Sizes ===============*/
-
-h1 {
-  color: #000000;
-  font-size: 3rem;
-  padding: 3% 0 1.5%;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
-
-h3 {
-  font-size: 2rem;
-  padding-bottom: 5px;
-}
-
-p {
-  font-size: 1.5rem;
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 
