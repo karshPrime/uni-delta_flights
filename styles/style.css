@@ -357,6 +357,10 @@ form textarea {
   border-radius: 0 2em 0 0;
 }
 
+.destination_content a {
+  text-decoration: none;
+}
+
 .destination_content td {
   padding-left: 2.5em;
 }
