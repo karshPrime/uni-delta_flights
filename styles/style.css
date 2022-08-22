@@ -20,7 +20,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+  padding: 1.25%;
 }
 
 hr {
@@ -28,23 +28,45 @@ hr {
 }
 
 footer {
-  padding-top: 5em;
+  padding-top: 3%;
 }
 
 /*terms and conditions*/
 .tnc {
-  font-size: 1.2em;
+  font-size: 120%;
   color: #ff0000;
 }
 
 #quotations {
-  padding: 0.8em 0;
+  padding: 1.5% 0;
   color: #955ac5;
   text-align: center;
 }
 
 #page_content {
-  padding: 1.3em 26em;
+  padding: 1% 20%;
+}
+
+
+/* ===================== aside =====================*/
+
+aside {
+  float: left;
+}
+
+#side_image {
+  width: 35%;
+  margin-left: 5%;
+  padding: 1%;
+  border: 0.25em dashed #00FFFF;
+  border-radius: 2.5em;
+}
+
+aside li {
+  font-size: 1.3rem;
+  padding-left: 1%;
+  margin-left: 5%;
+  padding-top: 0.3rem;
 }
 
 
@@ -53,7 +75,7 @@ footer {
 form fieldset {
   border: 0.2em dotted #00FFFF;
   border-radius: 0 2.5em 0.5em 0;
-  padding-inline: 1em;
+  padding-inline: 1%;
   padding-top: 0.7em;
   padding-bottom: 2em;
   margin-bottom: 3em;
@@ -80,15 +102,18 @@ form input[type=text] {
   margin-left: 0.2em;
   margin-right: 2.5em;
 
+  width: 30%;
   font-size: 0.8em;
+  color: #00ffff;
 }
 
 form input[id=email] {
-  width: 82.7%;
+  width: 85.5%;
 }
 
 form input[type=text]:focus {
   border-color: #000;
+  color: #000;
 }
 
 form textarea {
@@ -149,6 +174,7 @@ form textarea {
 .button:active {
   background-color: #2428ff;
 }
+
 
 /* ==================== Tables ==================== */
 
@@ -231,7 +257,7 @@ form textarea {
 /* =============== Navigation Panel =============== */
 
 #logo {
-  margin-left: 1.6em;
+  margin-left: 1.6%;
   cursor: pointer;
   height: 3.4em;
 }
@@ -241,7 +267,7 @@ form textarea {
 }
 
 .nav_link {
-  font-size: 1.5em;
+  font-size: 120%;
   color: #955ac5;
   text-decoration: none;
   padding: 0 0.4em;
@@ -268,11 +294,13 @@ form textarea {
   animation: 20s banner_slideshow infinite;
 }
 
-#banner_slideshow figure img {
+#banner_slideshow img {
   float: left;
-  width: 20%;
-  padding: 0 4em;
-  border-radius: 5%;
+  width: 18%;
+  margin-inline: 1%;
+  padding: 0.1%;
+  border-radius: 2.5em;
+  border: 0.2em dashed #00FFFF;
 }
 
 /*slider animation*/
@@ -310,7 +338,7 @@ form textarea {
 #cover_img {
   margin: 0 18%;
   width: 64%;
-  padding: 0.1em;
+  padding: 0.5%;
   border: 0.2em dashed #00FFFF;
   border-radius: 2.5em;
 }
@@ -320,7 +348,7 @@ form textarea {
 
 #credit_cards {
   display: grid;
-  padding: 0 26em;
+  padding: 0 20%;
   grid-template-columns: repeat(3, 1fr);
   justify-items:first baseline;
 }
@@ -328,28 +356,27 @@ form textarea {
 .single_credit_card {
   border: 0.2em dashed #00FFFF;
   border-radius: 3em 0.5em 0 0;
-  width: 22em;
-  margin: 0 1em 2em 0;
+  width: 92%;
+  margin: 0 1% 10% 0;
 }
 
 .credit_img {
-  width: 21.6em;
-  height: 12em;
+  width: 100%;
+  height: 10em;
   border-radius: 3em 0.5em 0 0;
   object-fit: fill;
 }
 
 #destination_cards {
-  display: grid;
-  padding: 0 26em;
+  padding-inline: 20%;
   justify-items:first baseline;
 }
 
 .single_destination_card {
   border: 0.3em dashed #00FFFF;
   border-radius: 0 5em 0.5em 0;
-  width: 70em;
-  margin: 0 1em 2em 0;
+  width: 100%;
+  margin-bottom: 3%;
 }
 
 .destination_img {
@@ -378,23 +405,24 @@ form textarea {
 
 h1 {
   color: #000000;
-  font-size: 3em;
-  padding: 10px 0 20px;
+  font-size: 3rem;
+  padding: 3% 0 1.5%;
 }
 
 h2 {
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 2rem;
   padding-bottom: 5px;
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   text-align: justify;
   text-justify: inter-word;
 }
+
 
 /* ================================================ */
