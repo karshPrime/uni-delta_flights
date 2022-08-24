@@ -32,6 +32,9 @@ footer {
   padding-top: 3%;
 }
 
+
+/* ============= Individual Properties ============ */
+
 /*terms and conditions*/
 .tnc {
   font-size: 120%;
@@ -48,6 +51,10 @@ footer {
   padding: 1% 20%;
 }
 
+#on_page {
+  color: #000000;
+  font-weight: bold;
+}
 
 
 /* =============== Custom font Sizes ===============*/
