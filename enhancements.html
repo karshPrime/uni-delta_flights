@@ -27,10 +27,85 @@
         <img src="images/pexels-sohel-patel-1655736.jpg" alt="Cover Image" id="cover_img">
 
         <section id="page_content">
-            <h1>Our commitment</h1>
+            <h1>Enhancements</h1>
             <p>
-                
+                To make this website as simple to use, minimalistic in design, and realistic as possible, 
+                a lot of addition small steps were taken which combined contribute to a big difference.
             </p>
+
+            <ol id="enhancement_title">
+                <h2><li>Tab icon</li></h2>
+                <p>Company logo right before site's title on opened browser tab. </p>
+                <xmp class="code_box">
+                    <link rel="icon" href="images/icon.png">
+                </xmp>
+
+                
+                <h2><li>Home animated banner</li></h2>
+                <p>
+                    Auto-rotation for banner image in home page. Rotation happens between 5 images.
+                    
+                </p>
+                <p class="code_box">
+                    #banner_slideshow img {<br>
+                    &nbsp; float: left;<br>
+                    &nbsp; width: 18%;<br>
+                    &nbsp; margin-inline: 1%;<br>
+                    &nbsp; padding: 0.1%;<br>
+                    &nbsp; border-radius: 2.5em;<br>
+                    &nbsp; border: 0.2em dashed #00FFFF;<br>
+                    }<br><br>
+                
+                    /*slider animation*/ <br>
+                    &nbsp;@keyframes banner_slideshow { <br>
+                        &nbsp; 0% { <br>
+                        &nbsp; &nbsp; left: 0%; <br>
+                        &nbsp; } <br>
+                        &nbsp; &nbsp;17% { <br>
+                        &nbsp; &nbsp;left: 0%; <br>
+                        &nbsp; } <br>
+                        &nbsp; &nbsp;25% { <br>
+                        &nbsp; &nbsp;left: -100%; <br>
+                        &nbsp; } <br>
+                        &nbsp; &nbsp;42% { <br>
+                        &nbsp; &nbsp;left: -100%; <br>
+                        &nbsp; } <br>
+                        &nbsp; &nbsp;50% { <br>
+                        &nbsp; &nbsp;left: -200%; <br>
+                        &nbsp; } <br>
+                        &nbsp; &nbsp;67% { <br>
+                        &nbsp; &nbsp;left: -200%; <br>
+                        &nbsp; } <br>
+                        &nbsp; &nbsp;75% { <br>
+                        &nbsp; &nbsp;left: -300%; <br>
+                        &nbsp; } <br>
+                        &nbsp; &nbsp;92% { <br>
+                        &nbsp; &nbsp;left: -300%; <br>
+                        &nbsp; } <br>
+                        &nbsp; &nbsp;100% { <br>
+                        &nbsp; &nbsp;left: -400%; <br>
+                        &nbsp; } <br>
+                    }
+                
+                </p>
+
+                <h2><li>Destination & Media-Credit Cards</li></h2>
+                <p>
+
+                </p>
+
+
+                <h2><li>Custom Cursor</li></h2>
+                <p>
+
+                </p>
+
+
+                <h2><li>Reactive Layout</li></h2>
+                <p>
+
+                </p>
+            </ol>
         </section>
 
         <footer>

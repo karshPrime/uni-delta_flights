@@ -56,6 +56,30 @@ footer {
   font-weight: bold;
 }
 
+#enhancement_title {
+  padding-top: 1%;
+}
+
+#enhancement_title h2{
+  padding-top: 3%;
+}
+
+#enhancement_title li{
+  margin-left: 0%;
+  list-style-type: upper-roman;
+}
+
+.code_box {
+  background-color: #121212;
+  font-family: 'Courier New', Courier, monospace;
+  color: #c4ffff;
+  font-size: 1rem;
+  border-radius: 15px;
+  margin-top: 1%;
+  padding: 2% 3%;
+  white-space: initial;
+}
+
 
 /* =============== Custom font Sizes ===============*/
 
