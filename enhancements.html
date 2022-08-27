@@ -93,19 +93,64 @@
 
                 <h2><li>Destination & Media-Credit Cards</li></h2>
                 <p>
+                    These cards exists to make required information more appealing in user's eyes by 
+                    seperating themselves with everything thats there on the screen.
+                </p>
+                <p class="code_box">
+                    /** css for cards for media credit (about.html)**/ 
+                    <br><br><br>
 
+                    /** properties for all cards **/<br>
+                    #credit_cards { <br>
+                    &nbsp; display: grid; <br>
+                    &nbsp; padding: 0 20%; <br>
+                    &nbsp; grid-template-columns: repeat(3, 1fr); <br>
+                    &nbsp; justify-items:first baseline; <br>
+                    } 
+                    <br><br>
+
+                    /** properties content within a single card **/<br>
+                    .single_credit_card { <br>
+                    &nbsp; border: 0.2em dashed #00FFFF; <br>
+                    &nbsp; border-radius: 3em 0.5em 0 0; <br>
+                    &nbsp; width: 92%; <br>
+                    &nbsp; margin: 0 1% 10% 0; <br>
+                    } 
+                    <br><br>
+
+                    /** properties for the images within the cards**/<br>
+                    .credit_img { <br>
+                    &nbsp; width: 100%; <br>
+                    &nbsp; height: 10em; <br>
+                    &nbsp; border-radius: 3em 0.5em 0 0; <br>
+                    &nbsp; object-fit: fill; <br>
+                    } <br>
                 </p>
 
 
                 <h2><li>Custom Cursor</li></h2>
                 <p>
-
+                    Any image bellow the resolution of 128x128 can be used as a cursor in html. Since there are different
+                    cursors for different purposes, like ⌛ looking cursor for loading pages, <strong>auto</strong> is specified
+                    after defining a single cursor. It wouldn't be required if a whole cursor pack is defined instead of just one.
+                </p>
+                <p class="code_box">
+                    * { <br>
+                    &nbsp; cursor: url(../images/cursor.png), auto; <br>
+                    } <br>
                 </p>
 
 
                 <h2><li>Reactive Layout</li></h2>
                 <p>
-
+                    The css file, <strong><a href="styles/responsive.css">responsive.css</a></strong>, 
+                    exists in the <em><strong>style</strong></em> directory in which different css rules for different
+                    screen dimenstions are specified.
+                    <br><br>
+                    First section contains styling for tablet view, which is when: <strong>675px < width < 1025px</strong>.
+                    These specified settings re-adjust the page for tablet view, and has been tested on iPads. Similarly,
+                    second section contains styling for phone view: <strong>width < 676px</strong>, and have been tested on
+                    iPhone 11pro.
                 </p>
             </ol>
         </section>
