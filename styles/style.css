@@ -326,7 +326,12 @@ form p {
   padding-top: 0.3em;
 }
 
-form input[type=text] {
+form label {
+  width: 150px;
+  display: inline-block;
+}
+
+form input[type=text], form input[type=email] {
   outline: 0;
   border-width: 0 0 2px;
   border-color: #00FFFF;
@@ -336,13 +341,19 @@ form input[type=text] {
   margin-left: 0.2em;
   margin-right: 2.5em;
 
-  width: 30%;
+  width: 900px;
   font-size: 0.8em;
   color: #00ffff;
 }
 
-form input[id=email] {
-  width: 85.5%;
+form input[id=adr_postcode] {
+  /*overriting width for passcode*/
+  width: 250px;
+}
+
+form label[for=product_enquire] {
+  /*overriting lable width*/
+  min-width: fit-content;
 }
 
 form input[type=text]:focus {
@@ -360,6 +371,7 @@ form textarea {
 .form_option {
   padding-right: 2em;
   font-size: 20px;
+  min-width: fit-content;
 }
 
 .form_button {
@@ -474,5 +486,15 @@ form textarea {
   text-align: center;
 }
 
+#adr_state {
+  background-color: azure;;
+  font-size: 0.7em;
+  margin: 0.3em 3em 0.3em 0.3em;
+  padding: 0.2em;
+  border: none;
+  border-radius: 0.3em;
+  box-shadow: 0 0.3em 0.4em 0 rgba(0,0,0,0.2);
+  text-align: center;
+}
 
 /* ================================================ */
