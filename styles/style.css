@@ -83,7 +83,8 @@ footer {
 }
 
 /*background image*/
-body, header, #page_content, #banner_slideshow, #destination_cards, #credit_cards {
+body, header, #page_content, #banner_slideshow, 
+  #destination_cards, #credit_cards {
   background-image: url(../images/background.png);
 }
 
