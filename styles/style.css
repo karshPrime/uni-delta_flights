@@ -14,7 +14,7 @@
   margin: 0;
   padding: 0;
   color: #4A2040;
-  background-color: #f8f8ff;
+  background-color: white;
 }
 
 header {
@@ -81,6 +81,10 @@ footer {
   white-space: initial;
 }
 
+/*background image*/
+body, header, #page_content, #banner_slideshow, #destination_cards, #credit_cards {
+  background-image: url(../images/background.png);
+}
 
 /* =============== Custom font Sizes ===============*/
 
@@ -229,15 +233,20 @@ p {
 
 .single_destination_card {
   border: 0.3em dashed #00FFFF;
-  border-radius: 15px;
+  border-radius: 0.5em 4em 4em 0.5em;
   width: 100%;
   margin-bottom: 3%;
 }
 
 .destination_img {
   width: 13em;
-  border-radius: 0 2em 0 0;
+  border-radius: 1em 2em 2em 1em;
   padding: 3px;
+  padding-left: 0;
+}
+
+.destination_content {
+  width: 80%;
 }
 
 .destination_content a {
@@ -253,10 +262,8 @@ p {
 }
 
 .air_stop {
-  width: 35%;
+  min-width: fit-content;
 }
-
-
 
 
 /* ===================== aside =====================*/
@@ -266,8 +273,9 @@ p {
 }
 
 #explore_img {
-  width: 35%;
-  margin-left: 5%;
+  width: 30%;
+  margin-left: 2%;
+  margin-top: 5%;
   padding: 1%;
   border: 0.25em dashed #00FFFF;
   border-radius: 2.5em;
@@ -482,11 +490,11 @@ textarea {
 .seats_select_main {
   appearance: none;
   background-color: #c4ffff;
-  font-size: 1.3em;
-  padding: 0.3em;
+  font-size: 1.1em;
+  padding: 0.1em;
   border: none;
   border-radius: 1.2em;
-  box-shadow: 0 0.3em 0.4em 0 rgba(0,0,0,0.2);
+  box-shadow: 0 0.2em 0.3em 0 rgba(0,0,0,0.2);
   text-align: center;
 }
 

@@ -100,10 +100,7 @@
     .credit_details {
         padding: 0.5em;
     }
-      
-    .air_stop {
-        width: 0;
-    }
+ 
 
     /* ===================== table ===================== */
     #discount_flights {
@@ -258,7 +255,7 @@
         padding: 0.5em;
     }
       
-    .air_stop {
+    #air_stop {
         width: 0;
     }
 
@@ -278,6 +275,12 @@
         width: 19%;
         margin-inline: 0.5%;
         border-radius: 1.5em;
+    }
+
+    #explore_img {
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 2em;
     }
 
     /*hidden for phone view*/
