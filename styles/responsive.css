@@ -1,7 +1,115 @@
-@media screen and (min-width: 31.25em) {
+/* iPad */
+@media screen and (min-width: 810px) {
+    
+    /* ================== font size ================== */
+    h1 {
+        font-size: 2.5rem;
+    }
 
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+
+    /* ===================== layout ==================== */
+    #page_content {
+        padding: 1% 10%;
+    }
+
+    #author_details {
+        margin-bottom: 1.5em;
+    }
+
+    /* ============== Updating nav panel ============== */
+    header {
+        display: block;
+        align-items: center;
+    }
+
+    .nav_bar {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    .nav_link {
+        font-size: 1.4em;
+    }
+
+    /* ===================== form ====================== */
+    form input[id=email] {
+        width: 83.8%;
+    }
+
+    form input[id=gname] {
+        width: 70%;
+    }
+
+    form input[id=fname] {
+        width: 73%;
+    }
+
+    /* ===================== cards ===================== */
+    #credit_cards {
+        padding: 0 10%;
+        font-size: 80%;
+    }
+      
+    .credit_img {
+        width: 100%;
+        height: 8em;
+    }
+      
+    #destination_cards {
+        padding-inline: 10%;
+    }
+
+    .destination_img {
+        width: 15em;
+    }
+
+    .destination_content td {
+        padding-left: 0.5em;
+    }
+      
+    .credit_details {
+        padding: 0.5em;
+    }
+      
+    .air_stop {
+        width: 0;
+    }
+
+    /* ===================== table ===================== */
+    #discount_flights {
+        font-size: 0.9rem;
+    }
+    /* ===================== images ==================== */
+    #cover_img {
+        margin: 0 7.5%;
+        width: 85%;
+        border-radius: 2em;
+    }
+
+    #explore_img {
+        width: 90%;
+        margin-top: 2em;
+    }
+
+    /*hidden for tablet view*/
+    #author_img {
+        display: none;
+    }
+
+    /* ===================== buttons =================== */
+    .button {
+        font-size: 0.7em;
+    }
 }
 
-@media screen and (max-width: 31.25em) {
-
-}

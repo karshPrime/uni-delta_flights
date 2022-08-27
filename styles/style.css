@@ -30,6 +30,7 @@ hr {
 
 footer {
   padding-top: 3%;
+  clear: both;
 }
 
 
@@ -37,7 +38,7 @@ footer {
 
 /*terms and conditions*/
 .tnc {
-  font-size: 120%;
+  font-size: 1.2rem;
   color: #ff0000;
 }
 
@@ -118,7 +119,7 @@ p {
 }
 
 .nav_link {
-  font-size: 120%;
+  font-size: 1.2rem;
   color: #955ac5;
   text-decoration: none;
   padding: 0 0.4em;
@@ -225,7 +226,7 @@ p {
 
 .single_destination_card {
   border: 0.3em dashed #00FFFF;
-  border-radius: 0 5em 0.5em 0;
+  border-radius: 15px;
   width: 100%;
   margin-bottom: 3%;
 }
@@ -233,6 +234,7 @@ p {
 .destination_img {
   width: 19em;
   border-radius: 0 2em 0 0;
+  padding: 5px;
 }
 
 .destination_content a {
@@ -248,7 +250,7 @@ p {
 }
 
 .air_stop {
-  width: 21em;
+  width: 18em;
 }
 
 
