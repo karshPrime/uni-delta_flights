@@ -1,5 +1,5 @@
 /* iPad */
-@media only screen and (max-width: 1650px) and (min-width: 676px) {
+@media only screen and (max-width: 1025px) and (min-width: 676px) {
     
     /* ================== font size ================== */
     h1 {
@@ -26,6 +26,12 @@
     #author_details {
         margin-bottom: 1.5em;
     }
+    
+    #author_head li, #author_details li {
+        font-size: 1rem;
+        padding-bottom: 1.5rem;
+    }
+
 
     /* ============== Updating nav panel ============== */
     header {
@@ -116,9 +122,10 @@
         margin-top: 2em;
     }
 
-    /*hidden for tablet view*/
     #author_img {
-        display: none;
+        margin-top: 5%;
+        width: 29%;
+        border-radius: 50em;
     }
 
     /* ===================== buttons =================== */
@@ -128,7 +135,7 @@
 }
 
 /*Phone*/
-@media screen and (max-width: 675px) {
+@media only screen and (max-width: 675px) {
  
     /* ================== font size ================== */
     h1 {
@@ -185,6 +192,14 @@
         padding-inline: 1%;
     }
 
+    #author_head li, #author_details li {
+        font-size: 1rem;
+        padding-bottom: 1.5rem;
+    }
+
+    #author_head {
+        width: 30%;
+    }
 
     /* ===================== form ====================== */
     form label {
