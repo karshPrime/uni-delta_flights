@@ -36,19 +36,19 @@
                     <legend>About you (Optional)</legend>
                     <p>
                         <label for="fname">First Name: </label>
-                        <input type="text" id="fname" pattern="[A-Za-z]{1,25}" placeholder="Joe"\>
+                        <input type="text" id="fname" pattern="[A-Za-z]{1,25}" placeholder="Joe" required \>
                     </p>
                     <p>
                         <label for="lname">Last Name: </label>
-                        <input type="text" id="lname" pattern="[A-Za-z]{1,25}" placeholder="Smith"\>
+                        <input type="text" id="lname" pattern="[A-Za-z]{1,25}" placeholder="Smith" required \>
                     </p>
                     <p>
                         <label for="email">Email: </label>
-                        <input type="email" id="email" placeholder="joesmith@deltaflights.com"\>
+                        <input type="email" id="email" placeholder="joesmith@deltaflights.com" required \>
                     </p>
                     <p>
                         <label for="phone">Phone No.</label>
-                        <input type="text" id="number" placeholder="+61 4xxx xxx xxx" pattern="[0-9]{9,10}">
+                        <input type="text" id="number" placeholder="+61 4xxx xxx xxx" pattern="[0-9]{9,10}" required \>
                     </p>
                     <br>
                     <p>
@@ -70,11 +70,11 @@
                     <legend>Address</legend>
                     <p>
                         <label for="adr_st">Street: </label>
-                        <input type="text" id="adr_st" placeholder="20 Flinder St." pattern="{1, 40}"\>
+                        <input type="text" id="adr_st" placeholder="20 Flinder St." pattern="{1, 40}" required \>
                     </p>
                     <p>
                         <label for="adr_sub">Suburb/Town:</label>
-                        <input type="text" name="adr_sub" id="adr_sub" placeholder="Melbourne" pattern="{1, 20}"\>
+                        <input type="text" name="adr_sub" id="adr_sub" placeholder="Melbourne" pattern="{1, 20}" required \>
                     </p>
                     <p>
                         <label for="adr_state">State:</label>
@@ -91,7 +91,7 @@
                         </select>
 
                         <label for="adr_postcode">Postcode:</label>
-                        <input type="text" id="adr_postcode" placeholder="1234" pattern="[0-9]{4}">
+                        <input type="text" id="adr_postcode" placeholder="1234" pattern="[0-9]{4}" required \>
                     </p>
                 </fieldset>
                 
@@ -131,7 +131,7 @@
                 <fieldset>
                     <legend>Your message</legend>
                     <p>Please Enter your message bellow:*</p>
-                    <textarea name="message" id="issue_description" rows="7" placeholder="Write description of your problem here..."></textarea>
+                    <textarea name="message" id="issue_description" rows="7" placeholder="Write description of your problem here..." required></textarea>
                 </fieldset>
                 <input class="form_button" type="submit" value="Submit">
                 <input class="form_button" type="reset" value="Clear">
