@@ -69,6 +69,7 @@ footer {
 #enhancement_title li{
   margin-left: 0%;
   list-style-type: upper-roman;
+  font-size: 2em;
 }
 
 .code_box {
@@ -88,7 +89,7 @@ footer {
 
 /*background image*/
 body, header, #page_content, #banner_slideshow, 
-  #destination_cards, #credit_cards {
+  #destination_cards, #credit_cards, h1, h2, h3 {
   background-image: url(../images/background.png);
 }
 

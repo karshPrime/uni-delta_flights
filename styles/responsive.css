@@ -32,7 +32,6 @@
         padding-bottom: 1.5rem;
     }
 
-
     /* ============== Updating nav panel ============== */
     header {
         display: block;
@@ -122,7 +121,6 @@
     .credit_details {
         padding: 0.5em;
     }
- 
 
     /* ===================== table ===================== */
     #discount_flights {
@@ -201,7 +199,6 @@
         font-size: 0.9em;
     }
 
-
     /* ===================== layout ==================== */
     #page_content {
         padding: 1% 5%;
@@ -218,6 +215,11 @@
 
     #author_head {
         width: 30%;
+    }
+
+    #enhancement_title li{
+        margin-left: 3%;
+        font-size: 1.2em;
     }
 
     /* ===================== form ====================== */
