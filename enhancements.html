@@ -36,122 +36,126 @@
             </p>
 
             <ol id="enhancement_title">
-                <h2><li>Tab icon</li></h2>
-                <p>Company logo right before site's title on opened browser tab. </p>
-                <xmp class="code_box">
-                    <link rel="icon" href="images/icon.png">
-                </xmp>
+                <li>
+                    <h2>Tab icon</h2>
+                    <p>Company logo right before site's title on opened browser tab. </p>
+                    <p class="code_box">
+                        &lt;link rel="icon" href="images/icon.png"&gt;
+                    </p>
+                </li>
 
-                
-                <h2><li>Home animated banner</li></h2>
-                <p>
-                    Auto-rotation for banner image in home page. Rotation happens between 5 images.
+                <li>
+                    <h2>Home animated banner</h2>
+                    <p>
+                        Auto-rotation for banner image in home page. Rotation happens between 5 images.    
+                    </p>
+                    <p class="code_box">
+                        #banner_slideshow img {<br>
+                        &nbsp; float: left;<br>
+                        &nbsp; width: 18%;<br>
+                        &nbsp; margin-inline: 1%;<br>
+                        &nbsp; padding: 0.1%;<br>
+                        &nbsp; border-radius: 2.5em;<br>
+                        &nbsp; border: 0.2em dashed #00FFFF;<br>
+                        }<br><br>
                     
-                </p>
-                <p class="code_box">
-                    #banner_slideshow img {<br>
-                    &nbsp; float: left;<br>
-                    &nbsp; width: 18%;<br>
-                    &nbsp; margin-inline: 1%;<br>
-                    &nbsp; padding: 0.1%;<br>
-                    &nbsp; border-radius: 2.5em;<br>
-                    &nbsp; border: 0.2em dashed #00FFFF;<br>
-                    }<br><br>
-                
-                    /*slider animation*/ <br>
-                    &nbsp;@keyframes banner_slideshow { <br>
-                        &nbsp; 0% { <br>
-                        &nbsp; &nbsp; left: 0%; <br>
-                        &nbsp; } <br>
-                        &nbsp; &nbsp;17% { <br>
-                        &nbsp; &nbsp;left: 0%; <br>
-                        &nbsp; } <br>
-                        &nbsp; &nbsp;25% { <br>
-                        &nbsp; &nbsp;left: -100%; <br>
-                        &nbsp; } <br>
-                        &nbsp; &nbsp;42% { <br>
-                        &nbsp; &nbsp;left: -100%; <br>
-                        &nbsp; } <br>
-                        &nbsp; &nbsp;50% { <br>
-                        &nbsp; &nbsp;left: -200%; <br>
-                        &nbsp; } <br>
-                        &nbsp; &nbsp;67% { <br>
-                        &nbsp; &nbsp;left: -200%; <br>
-                        &nbsp; } <br>
-                        &nbsp; &nbsp;75% { <br>
-                        &nbsp; &nbsp;left: -300%; <br>
-                        &nbsp; } <br>
-                        &nbsp; &nbsp;92% { <br>
-                        &nbsp; &nbsp;left: -300%; <br>
-                        &nbsp; } <br>
-                        &nbsp; &nbsp;100% { <br>
-                        &nbsp; &nbsp;left: -400%; <br>
-                        &nbsp; } <br>
-                    }
-                
-                </p>
+                        /*slider animation*/ <br>
+                        &nbsp;@keyframes banner_slideshow { <br>
+                            &nbsp; 0% { <br>
+                            &nbsp; &nbsp; left: 0%; <br>
+                            &nbsp; } <br>
+                            &nbsp; &nbsp;17% { <br>
+                            &nbsp; &nbsp;left: 0%; <br>
+                            &nbsp; } <br>
+                            &nbsp; &nbsp;25% { <br>
+                            &nbsp; &nbsp;left: -100%; <br>
+                            &nbsp; } <br>
+                            &nbsp; &nbsp;42% { <br>
+                            &nbsp; &nbsp;left: -100%; <br>
+                            &nbsp; } <br>
+                            &nbsp; &nbsp;50% { <br>
+                            &nbsp; &nbsp;left: -200%; <br>
+                            &nbsp; } <br>
+                            &nbsp; &nbsp;67% { <br>
+                            &nbsp; &nbsp;left: -200%; <br>
+                            &nbsp; } <br>
+                            &nbsp; &nbsp;75% { <br>
+                            &nbsp; &nbsp;left: -300%; <br>
+                            &nbsp; } <br>
+                            &nbsp; &nbsp;92% { <br>
+                            &nbsp; &nbsp;left: -300%; <br>
+                            &nbsp; } <br>
+                            &nbsp; &nbsp;100% { <br>
+                            &nbsp; &nbsp;left: -400%; <br>
+                            &nbsp; } <br>
+                        }
+                    
+                    </p>
+                </li>
 
-                <h2><li>Destination & Media-Credit Cards</li></h2>
-                <p>
-                    These cards exists to make required information more appealing in user's eyes by 
-                    seperating themselves with everything thats there on the screen.
-                </p>
-                <p class="code_box">
-                    /** css for cards for media credit (about.html)**/ 
-                    <br><br><br>
+                <li>
+                    <h2>Destination & Media-Credit Cards</h2>
+                    <p>
+                        These cards exists to make required information more appealing in user's eyes by 
+                        seperating themselves with everything thats there on the screen.
+                    </p>
+                    <p class="code_box">
+                        /** css for cards for media credit (about.html)**/ 
+                        <br><br><br>
 
-                    /** properties for all cards **/<br>
-                    #credit_cards { <br>
-                    &nbsp; display: grid; <br>
-                    &nbsp; padding: 0 20%; <br>
-                    &nbsp; grid-template-columns: repeat(3, 1fr); <br>
-                    &nbsp; justify-items:first baseline; <br>
-                    } 
-                    <br><br>
+                        /** properties for all cards **/<br>
+                        #credit_cards { <br>
+                        &nbsp; display: grid; <br>
+                        &nbsp; padding: 0 20%; <br>
+                        &nbsp; grid-template-columns: repeat(3, 1fr); <br>
+                        &nbsp; justify-items:first baseline; <br>
+                        } 
+                        <br><br>
 
-                    /** properties content within a single card **/<br>
-                    .single_credit_card { <br>
-                    &nbsp; border: 0.2em dashed #00FFFF; <br>
-                    &nbsp; border-radius: 3em 0.5em 0 0; <br>
-                    &nbsp; width: 92%; <br>
-                    &nbsp; margin: 0 1% 10% 0; <br>
-                    } 
-                    <br><br>
+                        /** properties content within a single card **/<br>
+                        .single_credit_card { <br>
+                        &nbsp; border: 0.2em dashed #00FFFF; <br>
+                        &nbsp; border-radius: 3em 0.5em 0 0; <br>
+                        &nbsp; width: 92%; <br>
+                        &nbsp; margin: 0 1% 10% 0; <br>
+                        } 
+                        <br><br>
 
-                    /** properties for the images within the cards**/<br>
-                    .credit_img { <br>
-                    &nbsp; width: 100%; <br>
-                    &nbsp; height: 10em; <br>
-                    &nbsp; border-radius: 3em 0.5em 0 0; <br>
-                    &nbsp; object-fit: fill; <br>
-                    } <br>
-                </p>
+                        /** properties for the images within the cards**/<br>
+                        .credit_img { <br>
+                        &nbsp; width: 100%; <br>
+                        &nbsp; height: 10em; <br>
+                        &nbsp; border-radius: 3em 0.5em 0 0; <br>
+                        &nbsp; object-fit: fill; <br>
+                        } <br>
+                    </p>
+                </li>
 
+                <li>
+                    <h2>Custom Cursor</h2>
+                    <p>
+                        Any image bellow the resolution of 128x128 can be used as a cursor in html. Since there are different
+                        cursors for different purposes, like ⌛ looking cursor for loading pages, <strong>auto</strong> is specified
+                        after defining a single cursor. It wouldn't be required if a whole cursor pack is defined instead of just one.
+                    </p>
+                    <p class="code_box">
+                        * { cursor: url(../images/cursor.png), auto; }
+                    </p>
+                </li>
 
-                <h2><li>Custom Cursor</li></h2>
-                <p>
-                    Any image bellow the resolution of 128x128 can be used as a cursor in html. Since there are different
-                    cursors for different purposes, like ⌛ looking cursor for loading pages, <strong>auto</strong> is specified
-                    after defining a single cursor. It wouldn't be required if a whole cursor pack is defined instead of just one.
-                </p>
-                <p class="code_box">
-                    * { <br>
-                    &nbsp; cursor: url(../images/cursor.png), auto; <br>
-                    } <br>
-                </p>
-
-
-                <h2><li>Reactive Layout</li></h2>
-                <p>
-                    The css file, <strong><a href="styles/responsive.css">responsive.css</a></strong>, 
-                    exists in the <em><strong>style</strong></em> directory in which different css rules for different
-                    screen dimenstions are specified.
-                    <br><br>
-                    First section contains styling for tablet view, which is when: <strong>675px < width < 1025px</strong>.
-                    These specified settings re-adjust the page for tablet view, and has been tested on iPads. Similarly,
-                    second section contains styling for phone view: <strong>width < 676px</strong>, and have been tested on
-                    iPhone 11pro.
-                </p>
+                <li>
+                    <h2>Reactive Layout</h2>
+                    <p>
+                        The css file, <strong><a href="styles/responsive.css">responsive.css</a></strong>, 
+                        exists in the <em><strong>style</strong></em> directory in which different css rules for different
+                        screen dimenstions are specified.
+                        <br><br>
+                        First section contains styling for tablet view, which is when: <strong>675px &lt; width &lt; 1025px</strong>.
+                        These specified settings re-adjust the page for tablet view, and has been tested on iPads. Similarly,
+                        second section contains styling for phone view: <strong>width &lt; 676px</strong>, and have been tested on
+                        iPhone 11pro.
+                    </p>
+                </li>
             </ol>
         </section>
 
