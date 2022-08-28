@@ -49,29 +49,29 @@
     }
 
     /* ===================== form ====================== */
-    form label {
+    #enquire_form label {
         width: 150px;
     }
       
-    form input[type=text], form input[type=email] {
+    #enquire_form input[type=text], #enquire_form input[type=email] {
         width: 60%;
         font-size: 0.8em;
     }
       
-    form input[id=adr_postcode] {
+    #enquire_form input[id=adr_postcode] {
         /*overriting width for passcode*/
         width: 250px;
     }
       
-    form label[for=product_enquire] {
+    #enquire_form label[for=product_enquire] {
         /*overriting lable width*/
         min-width: fit-content;
     }
 
-    .form_option {
+    #enquire_form .form_option {
         padding-right: 1em;
         font-size: 1.2rem;
-      }
+    }
 
     /* ===================== cards ===================== */
     #credit_cards {
@@ -198,21 +198,21 @@
     }
 
     /* ===================== form ====================== */
-    form label {
+    #enquire_form label {
         width: 150px;
     }
       
-    input[type=text], form input[type=email] {
+    #enquire_form input[type=text], #enquire_form input[type=email] {
         width: 99%;
         margin-bottom: 10px;
     }
       
-    input[id=adr_postcode] {
+    #enquire_form input[id=adr_postcode] {
         /*overriting width for passcode*/
         width: 51%;
     }
 
-    .form_option {
+    #enquire_form .form_option {
         /*getting checkboxes and radio buttons in verticle list*/
         display: inline-block;
         font-size: 1rem;

@@ -82,6 +82,10 @@ footer {
   white-space: initial;
 }
 
+.explore_section {
+  margin-bottom: 5%;
+}
+
 /*background image*/
 body, header, #page_content, #banner_slideshow, 
   #destination_cards, #credit_cards {
@@ -320,7 +324,7 @@ p {
 
 /* ===================== Form ===================== */
 
-form fieldset {
+#enquire_form fieldset {
   border: 0.2em dotted #00FFFF;
   border-radius: 0 2.5em 0.5em 0;
   padding-inline: 1%;
@@ -329,23 +333,23 @@ form fieldset {
   margin-bottom: 3em;
 }
 
-form legend {
+#enquire_form legend {
   font-size: 1.3em;
   color: #955ac5; /*same as navigation menu*/
 }
 
-form p {
+#enquire_form p {
   text-align: justify;
   padding-bottom: 0.6em;
   padding-top: 0.3em;
 }
 
-form label {
+#enquire_form label {
   width: 150px;
   display: inline-block;
 }
 
-input[type=text], form input[type=email] {
+#enquire_form input[type=text], #enquire_form input[type=email] {
   outline: 0;
   border-width: 0 0 2px;
   border-color: #00FFFF;
@@ -370,12 +374,12 @@ label[for=product_enquire], label[for=adr_state] {
   min-width: fit-content;
 }
 
-input[type=text]:focus {
+#enquire_form input[type=text]:focus {
   border-color: #000;
   color: #000;
 }
 
-textarea {
+#enquire_form textarea {
   border: 0.1em solid #00FFFF;
   width: 100%;
   resize: none;
@@ -500,7 +504,7 @@ textarea {
   text-align: center;
 }
 
-#adr_state {
+#adr_state, #product_enquire {
   background-color: azure;;
   font-size: 0.7em;
   margin: 0.3em 3em 0.3em 0.3em;
