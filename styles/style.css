@@ -80,7 +80,8 @@ footer {
   border-radius: 15px;
   margin-top: 1%;
   padding: 2% 3%;
-  white-space: initial;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .explore_section {

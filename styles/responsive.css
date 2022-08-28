@@ -177,6 +177,10 @@
         text-align: center;
     }
 
+    .code_box {
+        font-size: 0.7rem;
+    }
+
     /* ============== Updating nav panel ============== */
     header {
         display: block;
