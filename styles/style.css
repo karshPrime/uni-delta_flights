@@ -386,6 +386,44 @@ label[for=product_enquire], label[for=adr_state] {
   padding: 0.5em;
 }
 
+#book_flight {
+  padding: 1%;
+  margin-top: 2%;
+  border: 2px solid #00FFFF;
+  border-radius: 2em;
+}
+
+#book_flight div {
+  display: inline-block;
+}
+
+#book_flight label {
+  font-size: 1.2rem;
+  display: inline-block;
+}
+
+#book_flight input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #00FFFF;
+
+  
+  height: 26px;
+  padding: 0.5em;
+  margin-left: 0.1em;
+  margin-right: 1.5em;
+
+  font-size: 1.1rem;
+}
+
+#book_from, #book_to {
+  width: 200px;
+}
+
+#book_date_start, #book_date_end {
+  width: 145px;
+}
+
 .form_option {
   padding-right: 2em;
   font-size: 20px;

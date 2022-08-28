@@ -73,6 +73,29 @@
         font-size: 1.2rem;
     }
 
+    #book_flight div {
+        display: block;
+    }
+    
+    #book_flight label {
+        width: 17%;
+        padding-left: 5%;
+        padding-top: 3%;
+    }
+
+    #book_from, #book_to {
+        width: 73%;
+    }
+      
+    #book_date_start, #book_date_end {
+        width: 50%;
+    }
+
+    #book_flight select {
+        margin-left: 80%;
+        margin-bottom: 3%;
+    }
+
     /* ===================== cards ===================== */
     #credit_cards {
         padding: 0 10%;
@@ -217,6 +240,29 @@
         display: inline-block;
         font-size: 1rem;
         width: 95%;
+    }
+
+    #book_flight div {
+        display: block;
+    }
+    
+    #book_flight label {
+        width: 23%;
+        padding-left: 5%;
+        padding-top: 3%;
+    }
+
+    #book_from, #book_to {
+        width: 67%;
+    }
+      
+    #book_date_start, #book_date_end {
+        width: 45%;
+    }
+
+    #book_flight select {
+        margin-left: 75%;
+        margin-bottom: 3%;
     }
 
     /* ====================== cards ===================== */
