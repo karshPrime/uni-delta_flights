@@ -33,22 +33,22 @@
 
             <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php" id="enquire_form">
                 <fieldset>
-                    <legend>About you (Optional)</legend>
+                    <legend>About you</legend>
                     <p>
                         <label for="fname">First Name: </label>
-                        <input type="text" id="fname" pattern="[A-Za-z]{1,25}" placeholder="Joe" required>
+                        <input type="text" name="fname" id="fname" pattern="[A-Za-z]{1,25}" placeholder="Joe" required>
                     </p>
                     <p>
                         <label for="lname">Last Name: </label>
-                        <input type="text" id="lname" pattern="[A-Za-z]{1,25}" placeholder="Smith" required>
+                        <input type="text" name="lname" id="lname" pattern="[A-Za-z]{1,25}" placeholder="Smith" required>
                     </p>
                     <p>
                         <label for="email">Email: </label>
-                        <input type="email" id="email" placeholder="joesmith@deltaflights.com" required>
+                        <input type="email" name="email" id="email" placeholder="joesmith@deltaflights.com" required>
                     </p>
                     <p>
                         <label for="number">Phone No.</label>
-                        <input type="text" id="number" placeholder="+61 4xxx xxx xxx" pattern="[0-9]{9,10}" required>
+                        <input type="text" id="number" name="phone" placeholder="+61 4xxx xxx xxx" pattern="[0-9]{9,10}" required>
                     </p>
                     <br>
                     <p>
@@ -70,7 +70,7 @@
                     <legend>Address</legend>
                     <p>
                         <label for="adr_st">Street: </label>
-                        <input type="text" id="adr_st" placeholder="20 Flinder St." pattern="{1, 40}" required>
+                        <input type="text" id="adr_st" name="adr_st" placeholder="20 Flinder St." pattern="{1, 40}" required>
                     </p>
                     <p>
                         <label for="adr_sub">Suburb/Town:</label>
