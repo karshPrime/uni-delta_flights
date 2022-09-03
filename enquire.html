@@ -9,6 +9,7 @@
         <link rel="icon" href="images/icon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="styles/responsive.css" media="screen and (max-width: 1024px)"/>
+        <script src="scripts/part2.js"></script>
         <title>Delta • Enquire</title>
     </head>
 
@@ -31,7 +32,7 @@
         <section id="page_content">
             <h1>How can we be of your serivce today?</h1>
 
-            <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php" id="enquire_form">
+            <form id="enquire_form" action="payment.html">
                 <fieldset>
                     <legend>About you</legend>
                     <p>
@@ -124,11 +125,11 @@
                 </fieldset>
 
                 <fieldset>
-                    <legend>Your message</legend>
-                    <p>Please Enter your message bellow:*</p>
-                    <textarea name="message" id="issue_description" rows="7" placeholder="Write description of your problem here..." required></textarea>
+                    <legend>Feedback</legend>
+                    <p>Tell us about your experience!</p>
+                    <textarea name="message" id="issue_description" rows="7" placeholder="Write description of your problem here..."></textarea>
                 </fieldset>
-                <input class="form_button" type="submit" value="Submit">
+                <input type="submit" value="Pay now!" class="form_button"/>
                 <input class="form_button" type="reset" value="Clear">
             </form>
         </section>
