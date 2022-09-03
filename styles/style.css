@@ -478,6 +478,21 @@ label[for=product_enquire], label[for=adr_state] {
   background-color: #2428ff;
 }
 
+.reserve_button {
+  border: 0.2em solid #00FFFF;
+  font-size: 1.2em;
+  padding: 0.1em 1.1em;
+  text-align: center;
+  text-decoration: none;
+  color: #4A2040;
+  border-radius: 1.5em;
+  cursor: pointer;
+}
+
+/* Gets even darker when clicked; buttons*/
+.reserve_button:active {
+  background-color: #a0a1dd;
+}
 
 /* ==================== Tables ==================== */
 
