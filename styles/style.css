@@ -38,7 +38,7 @@ footer {
 /* ============= Individual Properties ============ */
 
 /*terms and conditions*/
-.tnc {
+#tnc {
   font-size: 1.2rem;
   color: #ff0000;
 }
