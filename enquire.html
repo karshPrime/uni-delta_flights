@@ -9,7 +9,7 @@
         <link rel="icon" href="images/icon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="styles/responsive.css" media="screen and (max-width: 1024px)"/>
-        <script src="scripts/part2.js"></script>
+        <script src="./scripts/enquire.js"></script>
         <title>Delta • Enquire</title>
     </head>
 
@@ -48,8 +48,8 @@
                         <input type="email" name="email" id="email" placeholder="joesmith@deltaflights.com" required>
                     </p>
                     <p>
-                        <label for="number">Phone No.</label>
-                        <input type="text" id="number" name="phone" placeholder="+61 4xxx xxx xxx" pattern="[0-9]{9,10}" required>
+                        <label for="phone">Phone No.</label>
+                        <input type="text" id="phone" name="phone" placeholder="+61 4xxx xxx xxx" pattern="[0-9]{9,10}" required>
                     </p>
                     <br>
                     <p>
@@ -79,8 +79,8 @@
                     </p>
                     <p>
                         <label for="adr_state">State:</label>
-                        <select name="State" id="adr_state">
-                            <option value="">(select)</option>
+                        <select name="adr_state" id="adr_state">
+                            <option value="none">(select)</option>
                             <option value="state_VIC">Victoria</option>
                             <option value="state_NSW">New South Wales</option>
                             <option value="state_QLD">Queensland</option>
@@ -98,30 +98,7 @@
                 </fieldset>
                 
                 <fieldset>
-                    <legend>Enquire type</legend>
-                    <p>
-                        <label for="product_enquire">Concern Regarding:</label>
-                        <select name="product_enquire" id="product_enquire">
-                            <option value="">(select)</option>
-                            <option value="enq_booking">Booking</option>
-                            <option value="enq_deals">Deals Offered</option>
-                            <option value="enq_refund">Refunds</option>
-                            <option value="enq_policy">Our Policies</option>
-                        </select>
-                    </p>
-
-                    <br>
-                    <p>
-                        Please specify the content type. Select all that apply.
-                    </p>
-                    <input type="checkbox" name="content_type" id="content_report">
-                    <label for="content_report" class="form_option">Make a Complain</label>
-                    
-                    <input type="checkbox" name="content_type" id="content_suggestion">
-                    <label for="content_suggestion" class="form_option">Suggest an idea</label>
-                    
-                    <input type="checkbox" name="content_type" id="content_other">
-                    <label for="content_other" class="form_option">Other</label>
+                    <legend>Get Tickets</legend>
                 </fieldset>
 
                 <fieldset>
