@@ -27,7 +27,7 @@ function validate() {
         case "state_VIC":
             if ([3, 8].includes(pin_digit1)) {
                 pincode = adr_pin;
-                state = adr_sta;
+                state = "Victoria";
             } else {
                 error_msg = "Invalid Pincode for the selected state!";
                 validated = false;
@@ -37,7 +37,7 @@ function validate() {
         case "state_NSW":
             if ([1, 2].includes(pin_digit1)) {
                 pincode = adr_pin;
-                state = adr_sta;
+                state = "New South Wales";
             } else {
                 error_msg = "Invalid Pincode for the selected state!";
                 validated = false;
@@ -47,7 +47,7 @@ function validate() {
         case "state_QLD":
             if ([4, 9].includes(pin_digit1)) {
                 pincode = adr_pin;
-                state = adr_sta;
+                state = "Queensland";
             } else {
                 error_msg = "Invalid Pincode for the selected state!";
                 validated = false;
@@ -57,7 +57,7 @@ function validate() {
         case "state_NT":
             if (pin_digit1 == 0) {
                 pincode = adr_pin;
-                state = adr_sta;
+                state = "Northern Territory";
             } else {
                 error_msg = "Invalid Pincode for the selected state!";
                 validated = false;
@@ -67,7 +67,7 @@ function validate() {
         case "state_WA":
             if (pin_digit1 == 6) {
                 pincode = adr_pin;
-                state = adr_sta;
+                state = "Western Australia";
             } else {
                 error_msg = "Invalid Pincode for the selected state!";
                 validated = false;
@@ -77,7 +77,7 @@ function validate() {
         case "state_SA":
             if (pin_digit1 == 5) {
                 pincode = adr_pin;
-                state = adr_sta;
+                state = "South Australia";
             } else {
                 error_msg = "Invalid Pincode for the selected state!";
                 validated = false;
@@ -87,7 +87,7 @@ function validate() {
         case "state_TAS":
             if (pin_digit1 == 7) {
                 pincode = adr_pin;
-                state = adr_sta;
+                state = "Tasmania";
             } else {
                 error_msg = "Invalid Pincode for the selected state!";
                 validated = false;
@@ -97,7 +97,7 @@ function validate() {
         case "state_ACT":
             if (pin_digit1 == 0) {
                 pincode = adr_pin;
-                state = adr_sta;
+                state = "Capital Territory";
             } else {
                 error_msg = "Invalid Pincode for the selected state!";
                 validated = false;
@@ -155,32 +155,6 @@ function get_in_touch() {
 /* ]=============[ prefil saved data for next visit ]================[ */
 function prefill_form() {
     //
-}
-
-/* ]===========================[ table data ]========================[ */
-function destination_table() {
-    let destinations = [
-        { place: 'Sydney, NSW, Australia', cost: 'A$ 453.00', seats: '0', code: 'syd' },
-        { place: 'Perth, WA, Australia', cost: 'A$ 691.00', seats: '0', code: 'per' },
-        { place: 'Brisbane, QLD, Australia', cost: 'A$ 428.00', seats: '0', code: 'bri' },
-        { place: 'Aukland, New Zealand', cost: 'A$ 621.00', seats: '0', code: 'auk' },
-        { place: 'Suva, Fiji', cost: 'A$ 546.00', seats: '0', code: 'suv' },
-        { place: 'Hobart, Tasmania, Australia', cost: 'A$ 356.00', seats: '0', code: 'hob' },
-        { place: 'Singapore City, Singapore', cost: 'A$ 699.00', seats: '0', code: 'sin' }
-    ];
-
-    let table_html = "<table border='1|1'>";
-    
-    setTimeout(() => {
-        for(var i = 0; i < destinations.length; i++) {
-            table_html += '<tr>';
-            table_html += '<td>' + destinations[i].place + '</td>';
-            table_html += '<td>' + destinations[i].cost + '</td>';
-            table_html += '<td>' + destinations[i].seats + '</td>';
-            table_html += '</tr>';
-        }
-        document.getElementById("destinations").innerHTML = table_html;
-    }, 500);  
 }
 
 
