@@ -32,6 +32,88 @@
         <section id="page_content">
             <h1>Payment</h1>
 
+            <section>
+                <h3>Your Details</h3><br>
+                <aside class="confirm_table_bold">
+                    <ul class="confirm_table_list">
+                        <li>Name: </li>
+                        <li>Phone: </li>
+                        <li>Email: </li>
+                        <li>Address: </li>
+                        <li>Feedback: </li>
+                    </ul>
+                </aside>
+                <div class="confirm_table_details">
+                    <ul class="confirm_table_list">
+                        <li><span id="confirm_name"></span></li>
+                        <li><span id="confirm_phone"></span></li>
+                        <li><span id="confirm_email"></span></li>
+                        <li><span id="confirm_adr"></span></li>
+                        <li><span id="confirm_feed"></span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h3>Your Cart</h3>
+                <aside id="flight_destination_list">
+                    <ul id="confirm_add_place">
+                        <li><strong>Destination</strong></li>
+                    </ul>
+                </aside>
+                
+                <aside id="flight_seats_list">
+                    <ul id="confirm_add_seats">
+                        <li><strong>Cost (per Ticket)</strong></li>
+                    </ul>
+                </aside>
+
+                <aside id="flight_cost_list">
+                    <ul id="confirm_add_cost">
+                        <li><strong>Seats</strong></li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h3>Make your Payment!</h3>
+                <form action="" id="financial_form">
+                    <fieldset>
+                        <legend>Financial Details</legend>
+                        <p>
+                            <label for="card_name">Name on Card </label>
+                            <input type="text" name="card_name" id="card_name" pattern="[A-Za-z]{1,25}">
+                        </p>
+
+                        <section>
+                            <p> Select your card type </p>
+                            <input type="radio" name="card_type" id="mastercard">
+                            <label for="card_type_mastercard" class="form_option">Mastercard</label>
+        
+                            <input type="radio" name="card_type" id="visa">
+                            <label for="card_type_visa" class="form_option">Visa</label>
+                            
+                            <input type="radio" name="card_type" id="american_exp">
+                            <label for="card_type_american" class="form_option">American Express</label>    
+                        </section>
+                        <br>
+                        
+                        <p>
+                            <label for="lname">Expiry Date </label>
+                            <input type="text" name="exp_date" id="exp_date" placeholder="mm-yy">
+                        </p>
+
+                        <p>
+                            <label for="cvv">Card Verification Value</label>
+                            <input type="text" name="cvv" id="cvv" placeholder="CVV">
+                        </p>
+                    </fieldset>
+                    
+                    <input type="submit" value="Checkout!" class="form_button"/>
+                    <button class="form_button" type="reset" id="cancel_button">Cancel</button>
+                </form>
+            </section>
+            
         </section>
 
         <footer>
