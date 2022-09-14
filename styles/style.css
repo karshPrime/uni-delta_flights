@@ -94,6 +94,11 @@ body, header, #page_content, #banner_slideshow,
   background-image: url(../images/background.png);
 }
 
+#confirm_details_section {
+  border-radius: 2.5em;
+  border: 0.2em dashed #00FFFF;
+}
+
 /* =============== Custom font Sizes ===============*/
 
 h1 {
@@ -323,10 +328,58 @@ p {
   border-radius: 2.5em;
 }
 
+.confirm_table_bold {
+  float: left;
+  width: 15%;
+  font-weight: bold;
+}
+
+.confirm_table_bold li, .confirm_table_details li {
+  display: block;
+  font-size: 1.3rem;
+  padding-bottom: 1.5rem;
+  text-decoration: none;
+}
+
+.confirm_table_details {
+  float: left;
+  width: 83%;
+  min-width: fit-content;
+  clear: right;
+}
+
+#flight_destination_list {
+  float: left;
+  width: 49%;
+  padding-left: 3%;
+}
+
+#flight_seats_list, #flight_cost_list {
+  float: left;
+  width: 24%;
+}
+
+#flight_destination_list li, #flight_cost_list li {
+  display: block;
+  font-size: 1.3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1.25rem;
+  text-decoration: none;
+}
+
+#flight_seats_list li {
+  display: block;
+  font-size: 1.3rem;
+  padding-top: 0.30rem;
+  padding-bottom: 1.25rem;
+  text-decoration: none;
+  text-align: center;
+}
+
 
 /* ===================== Form ===================== */
 
-#enquire_form fieldset {
+#enquire_form fieldset, #financial_form fieldset {
   border: 0.2em dotted #00FFFF;
   border-radius: 0 2.5em 0.5em 0;
   padding-inline: 1%;
@@ -335,7 +388,7 @@ p {
   margin-bottom: 3em;
 }
 
-#enquire_form legend {
+#enquire_form legend, #financial_form legend {
   font-size: 1.3em;
   color: #955ac5; /*same as navigation menu*/
 }
@@ -351,7 +404,18 @@ p {
   display: inline-block;
 }
 
-#enquire_form input[type=text], #enquire_form input[type=email] {
+#financial_form p {
+  text-align: justify;
+  padding-bottom: 0.6em;
+  padding-top: 0.3em;
+}
+
+#financial_form label {
+  width: 255px;
+  display: inline-block;
+}
+
+#enquire_form input[type=text], #enquire_form input[type=email], #financial_form input[type=text] {
   outline: 0;
   border-width: 0 0 2px;
   border-color: #00FFFF;
@@ -363,7 +427,7 @@ p {
 
   width: 60%;
   font-size: 0.8em;
-  color: #00ffff;
+  color: #005383;
 }
 
 input[id=adr_postcode] {
@@ -451,6 +515,15 @@ label[for=product_enquire], label[for=adr_state] {
   background-color: #ff0000;
   border: 0.1em solid #ff0000;
   color: white;
+}
+
+#financial_form fieldset {
+  border: 0.2em dotted #00FFFF;
+  border-radius: 0 2.5em 0.5em 0;
+  padding-inline: 1%;
+  padding-top: 0.7em;
+  padding-bottom: 2em;
+  margin-bottom: 3em;
 }
 
 
