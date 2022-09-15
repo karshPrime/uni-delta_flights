@@ -144,6 +144,7 @@ function validate() {
         }
     }
 
+    // checking if all seats are actually unselected
     if (zero_seats == seats.length) {
         error_msg += "Pleast select atleast one seat\n";
         validated = false;
