@@ -21,7 +21,7 @@ function validate() {
     switch (adr_sta) {
         case "none":
             validated = false;
-            error_msg = "Select a state";
+            error_msg += "Select a state\n";
             break;
 
         case "state_VIC":
@@ -29,7 +29,7 @@ function validate() {
                 pincode = adr_pin;
                 state = "Victoria";
             } else {
-                error_msg = "Invalid Pincode for the selected state!";
+                error_msg += "Invalid Pincode for the selected state!\n";
                 validated = false;
             }
             break;
@@ -39,7 +39,7 @@ function validate() {
                 pincode = adr_pin;
                 state = "New South Wales";
             } else {
-                error_msg = "Invalid Pincode for the selected state!";
+                error_msg += "Invalid Pincode for the selected state!\n";
                 validated = false;
             }
             break;
@@ -49,7 +49,7 @@ function validate() {
                 pincode = adr_pin;
                 state = "Queensland";
             } else {
-                error_msg = "Invalid Pincode for the selected state!";
+                error_msg += "Invalid Pincode for the selected state!\n";
                 validated = false;
             }
             break;
@@ -59,7 +59,7 @@ function validate() {
                 pincode = adr_pin;
                 state = "Northern Territory";
             } else {
-                error_msg = "Invalid Pincode for the selected state!";
+                error_msg += "Invalid Pincode for the selected state!\n";
                 validated = false;
             }
             break;
@@ -69,7 +69,7 @@ function validate() {
                 pincode = adr_pin;
                 state = "Western Australia";
             } else {
-                error_msg = "Invalid Pincode for the selected state!";
+                error_msg += "Invalid Pincode for the selected state!\n";
                 validated = false;
             }
             break;
@@ -79,7 +79,7 @@ function validate() {
                 pincode = adr_pin;
                 state = "South Australia";
             } else {
-                error_msg = "Invalid Pincode for the selected state!";
+                error_msg += "Invalid Pincode for the selected state!\n";
                 validated = false;
             }
             break;
@@ -89,7 +89,7 @@ function validate() {
                 pincode = adr_pin;
                 state = "Tasmania";
             } else {
-                error_msg = "Invalid Pincode for the selected state!";
+                error_msg += "Invalid Pincode for the selected state!\n";
                 validated = false;
             }
             break;
@@ -99,15 +99,60 @@ function validate() {
                 pincode = adr_pin;
                 state = "Capital Territory";
             } else {
-                error_msg = "Invalid Pincode for the selected state!";
+                error_msg += "Invalid Pincode for the selected state!\n";
                 validated = false;
             }
             break;
     }
 
+
+    // check seats information
+    var zero_seats = 0;
+    var valid_seats = [];
+    var seats = [
+        document.getElementById("flight_syd").value ,
+        document.getElementById("flight_per").value ,
+        document.getElementById("flight_bri").value ,
+        document.getElementById("flight_auk").value ,
+        document.getElementById("flight_suv").value ,
+        document.getElementById("flight_hob").value ,
+        document.getElementById("flight_sin").value
+    ]
+
+    // checking values
+    for (var i = 0; i < seats.length; i++) {
+        // check for negative value
+        if (isNaN(seats[i])) {
+            error_msg += "Number of seats must be an integer\n";
+            validated = false;
+
+        } else if (seats[i] < 0) {
+            error_msg += "Seats cannot be negative\n";
+            validated = false;
+
+        } else if (seats[i] == 0 || seats[i] == undefined) {
+            // to confirm 0 seats aren't requested
+            zero_seats += 1;
+
+        } else if (Math.floor(seats[i]) != seats[i]) {
+            // make sure numbers are proper integer; and not decimal
+            error_msg += "Number of seats must be a whole number\n";
+            validated = false;
+
+        } else {
+            valid_seats.push([i, seats[i]]);
+        }
+    }
+
+    if (zero_seats == seats.length) {
+        error_msg += "Pleast select atleast one seat\n";
+        validated = false;
+    }
+
+
     // actions depending on if the entered data is correct
     if (validated) {
-        save_data(state, pincode);
+        save_data(state, pincode, valid_seats);
     } else {
         alert(error_msg);
     }
@@ -116,7 +161,7 @@ function validate() {
 }
 
 /* ]=====================[ save entered data ]=======================[ */
-function save_data(state, pin) {
+function save_data(state, pin, seats) {
     sessionStorage.fname = document.getElementById("fname").value;
     sessionStorage.lname = document.getElementById("lname").value;
     sessionStorage.email = document.getElementById("email").value;
@@ -135,6 +180,7 @@ function save_data(state, pin) {
         sessionStorage.comments = "N/A";
     }
 
+    sessionStorage.seats = seats;
     sessionStorage.method = get_in_touch; // get in touch method
 }
 
