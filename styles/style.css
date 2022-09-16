@@ -99,6 +99,14 @@ body, header, #page_content, #banner_slideshow,
   border: 0.2em dashed #00FFFF;
 }
 
+#price_total {
+  text-align: left;
+  padding-left: 3%;
+  padding-bottom: 3%;
+  font-size: 1.75em;
+  font-weight: bolder;
+}
+
 /* =============== Custom font Sizes ===============*/
 
 h1 {
