@@ -140,7 +140,8 @@ function validate() {
             validated = false;
 
         } else {
-            valid_seats.push([i, seats[i]]);
+            valid_seats.push(i);        // odd = which seat 
+            valid_seats.push(seats[i]); // even = how many seats
         }
     }
 
