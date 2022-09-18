@@ -60,15 +60,14 @@ function selected_flights() {
 
 // cancels booking 
 function cancel_booking() {
-    alert("hmm")
     window.location = "index.html";
 }
 
 function init() {
     get_data();
     selected_flights();
-    // document.getElementById("confirm_data").onsubmit = validate;
-    // document.getElementById("cancel_button").onclick = cancel_booking;
+    document.getElementById("financial_form").onsubmit = validate;
+    document.getElementById("financial_form").onreset= cancel_booking;
 }
 
 window.onload = init;
