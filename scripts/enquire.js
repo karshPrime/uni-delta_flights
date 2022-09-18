@@ -110,14 +110,13 @@ function validate() {
     var zero_seats = 0;
     var valid_seats = [];
     var seats = [
-        document.getElementById("flight_syd").value ,
-        document.getElementById("flight_per").value ,
-        document.getElementById("flight_bri").value ,
-        document.getElementById("flight_auk").value ,
-        document.getElementById("flight_suv").value ,
-        document.getElementById("flight_hob").value ,
-        document.getElementById("flight_sin").value
-    ]
+        document.getElementById("flight_syd").value,
+        document.getElementById("flight_per").value,
+        document.getElementById("flight_bri").value,
+        document.getElementById("flight_auk").value,
+        document.getElementById("flight_suv").value,
+        document.getElementById("flight_hob").value,
+        document.getElementById("flight_sin").value];
 
     // checking values
     for (var i = 0; i < seats.length; i++) {
