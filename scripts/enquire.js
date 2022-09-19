@@ -172,6 +172,7 @@ function save_data(state, pin, seats) {
     sessionStorage.adr_sub = document.getElementById("adr_sub").value;
     sessionStorage.adr_sta = state;
     sessionStorage.adr_pin = pin;
+    sessionStorage.seats = seats;
 
     let comments = document.getElementById("issue_description").value;
     // save comment if something's there, otherwise save N/A
@@ -181,22 +182,14 @@ function save_data(state, pin, seats) {
         sessionStorage.comments = "N/A";
     }
 
-    sessionStorage.seats = seats;
-    sessionStorage.method = get_in_touch; // get in touch method
-}
-
-/* ]=========[ check for prefered method of communication ]==========[ */
-function get_in_touch() {
-    let method = "";
+    // store prefered means of communication
     if (document.getElementById("main_contact_phone").checked) {
-        method = "Phone";
+        sessionStorage.commute = "Phone";
     } else if (document.getElementById("main_contact_post").checked) {
-        method = "Post";
+        sessionStorage.commute = "Post";
     } else {
-        method = "Email"; // default option
+        sessionStorage.commute = "Email"; // default option
     }
-    
-    return method;
 }
 
 /* ]=============[ prefil saved data for next visit ]================[ */
