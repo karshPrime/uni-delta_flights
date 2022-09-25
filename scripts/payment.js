@@ -5,6 +5,7 @@
 **/
 "use strict";
 
+/* ]====================[ validate entered data ]====================[ */
 function validate() {
     let validated = true;
     let error_msg = "";
@@ -85,7 +86,7 @@ function validate() {
 }
 
 
-// gets stored data into memory
+/* ]=================[ gets stored data into memory ]================[ */
 function get_data(flight_destinations) {
     // getting data
     if (sessionStorage.fname != undefined) {
@@ -129,7 +130,7 @@ function get_data(flight_destinations) {
     }
 }
 
-// displays selected flights in enquire with total cost
+/* ]====[ displays selected flights in enquire with total cost ]=====[ */
 function selected_flights(flight_destinations) {
     var seats = sessionStorage.seats.split(',');
     var flight_costs = [ 453.00, 691.00, 428.00, 621.00, 546.00, 356.00, 699.00 ];
@@ -155,7 +156,7 @@ function selected_flights(flight_destinations) {
 }
 
 
-// cancels booking 
+/* ]=====================[ cancels booking  ]========================[ */
 function cancel_booking() {
     window.location = "index.html";
 }
