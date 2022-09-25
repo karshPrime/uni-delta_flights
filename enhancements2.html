@@ -28,6 +28,95 @@
 
         <img src="images/pexels-sohel-patel-1655736.jpg" alt="Cover Image" id="cover_img">
 
+        <section id="page_content">
+            <h1>Enhancements (Assignment 2)</h1>
+            <p>
+                Additions made to the project to further increase the interactiveness of this website.
+            </p>
+
+            <ol id="enhancement_title">
+                <li>
+                    <h2>Pre-load user name as name on card</h2>
+                    <p>
+                        In <strong>payment.html</strong>, an initial value for name was generated from 
+                        user's previous responce to the form in <strong>enquire.html</strong>. This name 
+                        could be overwritte, if required, or left as it is.
+                    </p>
+                    <p class="code_box">
+                        let card_name = document.getElementById("card_name").value; <br>
+                        if (card_name == undefined || card_name.length < 1) {<br>
+                        &ensp; &ensp; document.getElementById("card_name").value = 
+                        sessionStorage.fname + ' ' + sessionStorage.lname;
+                        <br> }
+                    </p>
+                </li>
+
+                <li>
+                    <h2>Generating list from javascript</h2>
+                    <p>
+                        Taking inspiration from <a href="https://stackoverflow.com/questions/20673959/how-to-add-new-li-to-ul-onclick-with-javascript">
+                        this stack</a>, I designed the payment page such that flight tickets that the user 
+                        selects in <strong>enquire.html</strong> gets their index value stored in the memory,
+                        which is then used to re-generate data on the payment page- in the form of a list.
+                    </p>
+                    <p class="code_box">
+                        var add_place = document.getElementById("confirm_add_place"); // ul for places <br>
+                        var add_seats = document.getElementById("confirm_add_seats"); // ul for seats <br>
+                        var add_costs = document.getElementById("confirm_add_costs"); // ul for costs <br>
+                        <br>
+                        // writing data on the page <br>
+                        for (var i = 0; i &lt; (seats.length / 2); i++) {<br>
+                        &ensp; &ensp; current_cost = flight_costs[seats[i*2]] * seats[(i*2)+1];<br>
+                        &ensp; &ensp; total_cost += current_cost;<br>
+                        <br>
+                        &ensp; &ensp; add_place.innerHTML += '&lt;li&gt;' + flight_destinations[seats[i*2]] + '&lt;/li&gt;';<br>
+                        &ensp; &ensp; add_seats.innerHTML += '&lt;li&gt;' + seats[(i*2)+1] + '&lt;/li&gt;';<br>
+                        &ensp; &ensp; add_costs.innerHTML += '&lt;li&gt;A$ ' + current_cost + '.00&lt;/li&gt;';<br>
+                        }
+                    </p>
+                </li>
+
+                <li>
+                    <h2>Go to top</h2>
+                    <p>
+                        Inspired from <a href="https://www.youtube.com/watch?v=FK5DEa1Hvco">Youtube Video</a>,
+                        this is a simple fixed button that when clicked scroll the page to the very top. The button
+                        is present in <strong>payment.html</strong>, and has its respective syling described in the
+                        main stylesheet- <strong>style.css</strong>.
+                    </p>
+                    <p class="code_box">
+                        // enhancement.js <br>
+                        function scroll_up() { <br>
+                        &ensp; &ensp; window.scrollTo(0, 0);<br>
+                        }
+                        <br><br><br>
+
+                        // style.css <br>
+                        #scroll_up { <br>
+                        &ensp; &ensp; position: fixed; <br>
+                        &ensp; &ensp; right: 100px; <br>
+                        &ensp; &ensp; bottom: 10%; <br>
+                        &ensp; &ensp; width: 50px; <br>
+                        &ensp; &ensp; height: 50px; <br>
+                        &ensp; &ensp; border-radius: 50%; <br>
+                        &ensp; &ensp; background: #e75480; <br>
+                        &ensp; &ensp; box-shadow: 0 0 10px rgba(0,0,0,0.25); <br>
+                        &ensp; &ensp; color: white; <br>
+                        &ensp; &ensp; border: none; <br>
+                        &ensp; &ensp; outline: none; <br>
+                        &ensp; &ensp; cursor: pointer; <br>
+                        &ensp; &ensp; font-size: 2em; <br>
+                        } <br>
+                         <br>
+                        #scroll_up:hover{ <br>
+                            &ensp; &ensp; background: aqua; <br>
+                        } <br>
+                    </p>
+                </li>
+
+            </ol>
+        </section>
+
         <footer>
             <hr>
             <table ID="footer_table">
