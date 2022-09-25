@@ -81,29 +81,34 @@
 
             <section>
                 <h3>Make your Payment!</h3>
-                <form action="" id="financial_form">
+                <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" id="financial_form">
                     <fieldset>
                         <legend>Financial Details</legend>
                         <p>
                             <label for="card_name">Name on Card </label>
-                            <input type="text" name="card_name" id="card_name" pattern="[A-Za-z]{1,25}">
+                            <input type="text" name="card_name" id="card_name" pattern="[A-Za-z ]{1,25}">
                         </p>
 
                         <section>
                             <p> Select your card type </p>
-                            <input type="radio" name="card_type" id="mastercard">
+                            <input type="radio" name="card" id="mastercard" value="Mastercard">
                             <label for="card_type_mastercard" class="form_option">Mastercard</label>
         
-                            <input type="radio" name="card_type" id="visa">
+                            <input type="radio" name="card" id="visa" value="Visa">
                             <label for="card_type_visa" class="form_option">Visa</label>
                             
-                            <input type="radio" name="card_type" id="american_exp">
-                            <label for="card_type_american" class="form_option">American Express</label>    
+                            <input type="radio" name="card" id="american_exp" value="American Express">
+                            <label for="card_type_american" class="form_option">American Express</label>
                         </section>
                         <br>
+
+                        <p>
+                            <label for="card_number">Card Number</label>
+                            <input type="text" name="card_number" id="card_number">
+                        </p>
                         
                         <p>
-                            <label for="lname">Expiry Date </label>
+                            <label for="exp_date">Expiry Date </label>
                             <input type="text" name="exp_date" id="exp_date" placeholder="mm-yy">
                         </p>
 
@@ -111,10 +116,24 @@
                             <label for="cvv">Card Verification Value</label>
                             <input type="text" name="cvv" id="cvv" placeholder="CVV">
                         </p>
+
+                        <!--hidden feilds-->
+                        <input type="hidden" name="firstname" id="firstname">
+                        <input type="hidden" name="lastname" id="lastname">
+                        <input type="hidden" name="phone" id="phone">
+                        <input type="hidden" name="email" id="email">
+                        <input type="hidden" name="communication_method" id="communication_method">
+                        <input type="hidden" name="address_street" id="address_street">
+                        <input type="hidden" name="address_suburb" id="address_suburb">
+                        <input type="hidden" name="address_pin" id="address_pin">
+                        <input type="hidden" name="address_state" id="address_state">
+                        <input type="hidden" name="feedback" id="feedback">
+                        <input type="hidden" name="destinations" id="destinations">
+                        <input type="hidden" name="seats_respective_seq", id="seats">
                     </fieldset>
-                    
-                    <input type="submit" value="Checkout!" class="form_button"/>
-                    <button class="form_button" type="reset" id="cancel_button">Cancel</button>
+
+                    <input type="submit" value="Checkout!" class="form_button"/>;
+                    <button class="form_button" type="reset" id="cancel_button">Cancel</button>;
                 </form>
             </section>
             
