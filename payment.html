@@ -10,8 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="styles/responsive.css" media="screen and (max-width: 1024px)"/>
         <script src="scripts/payment.js"></script>
-        <script src="scripts/enhancements.js"></script>
-        <title>Delta • Product</title>
+        <title>Delta • Checkout</title>
     </head>
 
     <body>
@@ -75,9 +74,9 @@
                     </ul>
                 </aside>
                 
-                <article id="price_total">
+                <div id="price_total">
                     <strong>Total:  </strong><span id="total_cost"></span>
-                </article>
+                </div>
             </section>
 
             <section>
@@ -90,17 +89,17 @@
                             <input type="text" name="card_name" id="card_name" pattern="[A-Za-z ]{1,25}">
                         </p>
 
-                        <section>
+                        <div>
                             <p> Select your card type </p>
                             <input type="radio" name="card" id="mastercard" value="Mastercard">
-                            <label for="card_type_mastercard" class="form_option">Mastercard</label>
+                            <label for="mastercard" class="form_option">Mastercard</label>
         
                             <input type="radio" name="card" id="visa" value="Visa">
-                            <label for="card_type_visa" class="form_option">Visa</label>
+                            <label for="visa" class="form_option">Visa</label>
                             
                             <input type="radio" name="card" id="american_exp" value="American Express">
-                            <label for="card_type_american" class="form_option">American Express</label>
-                        </section>
+                            <label for="american_exp" class="form_option">American Express</label>
+                        </div>
                         <br>
 
                         <p>
@@ -130,7 +129,7 @@
                         <input type="hidden" name="address_state" id="address_state">
                         <input type="hidden" name="feedback" id="feedback">
                         <input type="hidden" name="destinations" id="destinations">
-                        <input type="hidden" name="seats_respective_seq", id="seats">
+                        <input type="hidden" name="seats_respective_seq" id="seats">
                     </fieldset>
 
                     <input type="submit" value="Checkout!" class="form_button"/>;

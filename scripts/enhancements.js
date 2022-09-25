@@ -23,14 +23,11 @@ only one time.
 */
 
 
-// Enhancement 3
-function scroll_up() {
-    window.scrollTo(0, 0);
-}
+
 
 
 function init() {
-    document.getElementById("scroll_up").onclick = scroll_up;
+    
 }
 
 window.onload = init;

@@ -12,6 +12,7 @@ function validate() {
 
     // check for if name on card is different
     let card_name = document.getElementById("card_name").value;
+    /*************************** Enhancement 1a ***************************/ 
     if (card_name == undefined || card_name.length < 1) {
         document.getElementById("card_name").value = sessionStorage.fname + ' ' + sessionStorage.lname;
     } else if (card_name.length > 40) {
@@ -100,8 +101,6 @@ function get_data(flight_destinations) {
         document.getElementById("confirm_adr").textContent = address;
         document.getElementById("confirm_feed").textContent = sessionStorage.comments;
     
-        document.getElementById("card_name").placeholder = name;
-
         document.getElementById("firstname").value = sessionStorage.fname;
         document.getElementById("lastname").value = sessionStorage.lname;
         document.getElementById("phone").value = sessionStorage.phone;
@@ -127,6 +126,10 @@ function get_data(flight_destinations) {
 
         document.getElementById("destinations").value = booked_places.join("; ");
         document.getElementById("seats").value = booked_seats.join("; ");
+
+        /*************************** Enhancement 1b ***************************/ 
+        document.getElementById("card_name").placeholder = name;
+
     }
 }
 
@@ -141,6 +144,7 @@ function selected_flights(flight_destinations) {
     var add_seats = document.getElementById("confirm_add_seats"); // ul for seats
     var add_costs = document.getElementById("confirm_add_costs"); // ul for costs
 
+    /************************* Enhancement 2 ***************************/ 
     // writing data on the page
     for (var i = 0; i < (seats.length / 2); i++) {
         current_cost = flight_costs[seats[i*2]] * seats[(i*2)+1];
@@ -161,6 +165,11 @@ function cancel_booking() {
     window.location = "index.html";
 }
 
+/*************************** Enhancement 3 *****************************/ 
+function scroll_up() {
+    window.scrollTo(0, 0);
+}
+
 function init() {
     var flight_destinations = ["Sydney, NSW, Australia", "Perth, WA, Australia", 
         "Brisbane, QLD, Australia", "Aukland, New Zealand", "Suva, Fiji", 
@@ -171,6 +180,7 @@ function init() {
 
     document.getElementById("financial_form").onsubmit = validate;
     document.getElementById("financial_form").onreset= cancel_booking;
+    document.getElementById("scroll_up").onclick = scroll_up;
 }
 
 window.onload = init;
