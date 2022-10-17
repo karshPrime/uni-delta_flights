@@ -21,7 +21,7 @@
                 <li class="nav_bar"><a class="nav_link" id="<?php if($page=='product'){echo 'on_page';}?>" href="product.php"> Browse </a></li>
                 <li class="nav_bar"><a class="nav_link" id="<?php if($page=='enquire'){echo 'on_page';}?>" href="enquire.php"> Enquire </a></li>
                 <li class="nav_bar"><a class="nav_link" id="<?php if($page=='about'){echo 'on_page';}?>" href="about.php"> About Us </a></li>
-                <li class="nav_bar"><a class="nav_link" id="<?php if($page=='enhancements'){echo 'on_page';}?>" href="enhancements2.php"> Enhancements </a></li>
+                <li class="nav_bar"><a class="nav_link" id="<?php if($page=='enhancements'){echo 'on_page';}?>" href="enhancements.php"> Enhancements </a></li>
             </ul>
         </nav>
     </header>
