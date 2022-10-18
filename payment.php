@@ -1,4 +1,4 @@
-<?php $page='payment'; include("header.php") ?>
+<?php $page='payment'; include("header.inc") ?>
 
 <img src="images/pexels-te-lensfix-1371360.jpg" alt="Cover Image" id="cover_img">
         
@@ -109,8 +109,8 @@
             <button class="form_button" type="reset" id="cancel_button">Cancel</button>;
         </form>
     </section>
-    
+
     <button id="scroll_up">↑</button>
 </section>
 
-<?php include("footer.php") ?>
+<?php include("footer.inc") ?>

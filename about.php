@@ -1,4 +1,4 @@
-<?php $page='about'; include("header.php") ?>
+<?php $page='about'; include("header.inc") ?>
 
 <img src="images/pexels-andrea-piacquadio-3769120.jpg" alt="cover_img" id="cover_img">
 
@@ -161,4 +161,4 @@
     </div>
 </div>
 
-<?php include("footer.php") ?>
+<?php include("footer.inc") ?>

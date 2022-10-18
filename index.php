@@ -1,4 +1,4 @@
-<?php $page='home'; include("header.php") ?>
+<?php $page='home'; include("header.inc") ?>
 
 <!--Top animated banner-->
 <!--Both Article and Section starts with a Heading; hence using div-->
@@ -127,4 +127,4 @@
     </div>
 </div>
 
-<?php include("footer.php") ?>
+<?php include("footer.inc") ?>

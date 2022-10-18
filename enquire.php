@@ -1,4 +1,4 @@
-<?php $page='enquire'; include("header.php") ?>
+<?php $page='enquire'; include("header.inc") ?>
 
 <img src="images/pexels-humphrey-muleba-1647116.jpg" alt="Cover Image" id="cover_img">
         
@@ -117,4 +117,4 @@
     </form>
 </section>
 
-<?php include("footer.php") ?>
+<?php include("footer.inc") ?>

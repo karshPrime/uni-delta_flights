@@ -1,4 +1,4 @@
-<?php $page='product'; include("header.php") ?>
+<?php $page='product'; include("header.inc") ?>
 
 <img src="images/pexels-jason-toevs-2033343.jpg" alt="Cover Image" id="cover_img">
         
@@ -252,4 +252,4 @@
     </section>
 </section>
 
-<?php include("footer.php") ?>
+<?php include("footer.inc") ?>
