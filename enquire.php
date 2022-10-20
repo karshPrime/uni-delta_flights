@@ -1,10 +1,11 @@
 <?php $page='enquire'; include("header.inc") ?>
+<script src="./scripts/enquire.js"></script>
 
 <img src="images/pexels-humphrey-muleba-1647116.jpg" alt="Cover Image" id="cover_img">
         
 <section id="page_content">
     <h1>How can we be of your serivce today?</h1>
-    <form id="enquire_form" action="payment.html">
+    <form id="enquire_form" action="payment.php">
         <fieldset>
             <legend>About you</legend>
             <p>

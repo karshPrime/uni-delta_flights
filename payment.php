@@ -1,4 +1,5 @@
 <?php $page='payment'; include("header.inc") ?>
+<script src="scripts/payment.js"></script>
 
 <img src="images/pexels-te-lensfix-1371360.jpg" alt="Cover Image" id="cover_img">
         
