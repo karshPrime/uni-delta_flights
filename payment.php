@@ -55,12 +55,12 @@
 
     <section>
         <h3>Make your Payment!</h3>
-        <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" id="financial_form">
+        <form action="process_order.php" method="post" id="financial_form">
             <fieldset>
                 <legend>Financial Details</legend>
                 <p>
                     <label for="card_name">Name on Card </label>
-                    <input type="text" name="card_name" id="card_name" pattern="[A-Za-z ]{1,25}">
+                    <input type="text" name="card_name" id="card_name"">
                 </p>
 
                 <div>
