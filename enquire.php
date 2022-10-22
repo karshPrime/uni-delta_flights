@@ -10,19 +10,19 @@
             <legend>About you</legend>
             <p>
                 <label for="fname">First Name: </label>
-                <input type="text" name="fname" id="fname" placeholder="Joe" required>
+                <input type="text" name="fname" id="fname" placeholder="Joe">
             </p>
             <p>
                 <label for="lname">Last Name: </label>
-                <input type="text" name="lname" id="lname" placeholder="Smith" required>
+                <input type="text" name="lname" id="lname" placeholder="Smith">
             </p>
             <p>
                 <label for="email">Email: </label>
-                <input type="email" name="email" id="email" placeholder="joesmith@deltaflights.com" required>
+                <input type="email" name="email" id="email" placeholder="joesmith@deltaflights.com">
             </p>
             <p>
                 <label for="phone">Phone No.</label>
-                <input type="text" id="phone" name="phone" placeholder="+61 4xxx xxx xxx" required>
+                <input type="text" id="phone" name="phone" placeholder="+61 4xxx xxx xxx">
             </p>
             <br>
             <p>
@@ -34,7 +34,6 @@
             <label for="main_contact_email" class="form_option">Email</label>
             <input type="radio" name="main_contact" id="main_contact_phone">
             <label for="main_contact_phone" class="form_option">Phone</label>
-            
             <input type="radio" name="main_contact" id="main_contact_post">
             <label for="main_contact_post" class="form_option">Post</label>
         </fieldset>
@@ -43,11 +42,11 @@
             <legend>Address</legend>
             <p>
                 <label for="adr_st">Street: </label>
-                <input type="text" id="adr_st" name="adr_st" placeholder="20 Flinder St." required>
+                <input type="text" id="adr_st" name="adr_st" placeholder="20 Flinder St.">
             </p>
             <p>
                 <label for="adr_sub">Suburb/Town:</label>
-                <input type="text" name="adr_sub" id="adr_sub" placeholder="Melbourne" required>
+                <input type="text" name="adr_sub" id="adr_sub" placeholder="Melbourne">
             </p>
             <p>
                 <label for="adr_state">State:</label>
@@ -65,12 +64,14 @@
             </p>
             <p>
                 <label for="adr_postcode">Postcode:</label>
-                <input type="text" id="adr_postcode" placeholder="1234" required>
+                <input type="text" id="adr_postcode" placeholder="1234">
             </p>
         </fieldset>
         
         <fieldset>
             <legend>Get Tickets</legend>
+            <label for="seats" class="form_option">seats</label>
+            <input type="text" name="seats" id="seats">
             <div>
                 <aside id="flight_destination_list">
                     <ul>
@@ -96,13 +97,13 @@
                 </aside>
                 <aside id="flight_seats_list">
                     <ul>
-                        <li> <input type="text" id="flight_syd"> </li>
-                        <li> <input type="text" id="flight_per"> </li>
-                        <li> <input type="text" id="flight_bri"> </li>
-                        <li> <input type="text" id="flight_auk"> </li>
-                        <li> <input type="text" id="flight_suv"> </li>
-                        <li> <input type="text" id="flight_hob"> </li>
-                        <li> <input type="text" id="flight_sin"> </li>
+                        <li> <input type="radio" name="flight_to" id="flight_syd"> </li>
+                        <li> <input type="radio" name="flight_to" id="flight_per"> </li>
+                        <li> <input type="radio" name="flight_to" id="flight_bri"> </li>
+                        <li> <input type="radio" name="flight_to" id="flight_auk"> </li>
+                        <li> <input type="radio" name="flight_to" id="flight_suv"> </li>
+                        <li> <input type="radio" name="flight_to" id="flight_hob"> </li>
+                        <li> <input type="radio" name="flight_to" id="flight_sin"> </li>
                     </ul>
                 </aside>
             </div>

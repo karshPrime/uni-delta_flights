@@ -22,7 +22,7 @@
         }
 
 
-        $error_msg = ""; // error message identifier
+        $errMsg = ""; // error message identifier
 
 
         // redirect to enquire if opened this website directly
@@ -35,161 +35,163 @@
         // Sanitization ==========================================
         $firstname = sanitise_input($_POST["firstname"]);
         if (!preg_match("/^[a-zA-Z]{1,25}+$/", $firstname)) {
-            $error_msg .= "<p class='center_allign'>INVALID First name!</p>\n";
+            $errMsg .= "<p class='center_allign'>INVALID First name!</p>\n";
         }
         
         $lastname = sanitise_input($_POST["lastname"]);
         if (!preg_match("/^[a-zA-Z]{1,25}+$/", $lastname)) {
-            $error_msg .= "<p class='center_allign'>INVALID Last name!</p>\n";
+            $errMsg .= "<p class='center_allign'>INVALID Last name!</p>\n";
         }
         
         $phone = sanitise_input($_POST["phone"]);	
         if (!preg_match("/[0-9]{10}/", $phone)) {
-            $error_msg .= "<p class='center_allign'>INVALID phone number!.</p>\n";
+            $errMsg .= "<p class='center_allign'>INVALID phone number!.</p>\n";
         }
         
         $email = sanitise_input($_POST["email"]);	
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $error_msg = "<p class='center_allign'>INVALID email!</p>\n";
+            $errMsg = "<p class='center_allign'>INVALID email!</p>\n";
         }
 
         $communication_method = sanitise_input($_POST["communication_method"]);
-        // no validation required; options are limited and default is set.
+        // response is limited to certain defined values with mentioned defauled; no validation required
 
         $feedback = sanitise_input($_POST["feedback"]);
         // feedback could be anything; no validation required.
 
         $address_street = sanitise_input($_POST["address_street"]);
         if (!preg_match("/^[a-zA-Z0-9 ,.'-]{1,40}$/", $address_street)) {
-            $error_msg .= "<p class='center_allign'>INVALID street!</p>\n";
+            $errMsg .= "<p class='center_allign'>INVALID street!</p>\n";
         }
         
         $address_suburb = sanitise_input($_POST["address_suburb"]);	
         if (!preg_match("/^[a-zA-Z]{1,20}+$/", $address_suburb)) {
-            $error_msg .= "<p class='center_allign'>INVALID suburb!</p>\n";
+            $errMsg .= "<p class='center_allign'>INVALID suburb!</p>\n";
         }
+        
         
         $address_state = sanitise_input($_POST["address_state"]); 
         if ($address_state == "none") {
             // checking if some address_state indeed has been selected
-            $error_msg .= "<p class='center_allign'>Please select your state.</p>\n";
+            $errMsg .= "<p class='center_allign'>Please select your state.</p>\n";
         }
          
         $address_pin = $_POST["address_pin"];
         if (!preg_match("/[0-9]{4,4}/", $address_pin)) {
-            $error_msg .= "<p class='center_allign'> $address_pin.</p>\n";
+            $errMsg .= "<p class='center_allign'> $address_pin.</p>\n";
         } else {
             switch ($address_state) {
             case "VIC":
                 if ($address_pin[0] != "3" && $address_pin[0] != "8") {
-                    $error_msg .= "<p class='center_allign'>INVALID pin code!</p>\n";
+                    $errMsg .= "<p class='center_allign'>INVALID pin code!</p>\n";
                 }
                 break;
             
             case "QLD":
             if ($address_pin[0] != "4" && $address_pin[0] != "9") {
-                $error_msg .= "<p class='center_allign'>INVALID pin code!</p>\n";
+                $errMsg .= "<p class='center_allign'>INVALID pin code!</p>\n";
             }
             break;
 
             case "SA":
             if ($address_pin[0] != "5") {
-                $error_msg .= "<p class='center_allign'>INVALID pin code!</p>\n";
+                $errMsg .= "<p class='center_allign'>INVALID pin code!</p>\n";
             }
             break;
 
             case "TAS":
             if ($address_pin[0] != "7") {
-                $error_msg .= "<p class='center_allign'>INVALID pin code!</p>\n";
+                $errMsg .= "<p class='center_allign'>INVALID pin code!</p>\n";
             }
             break;
 
             case "WA":
             if ($address_pin[0] != "6") {
-                $error_msg .= "<p class='center_allign'>INVALID pin code!</p>\n";
+                $errMsg .= "<p class='center_allign'>INVALID pin code!</p>\n";
             }
             break;
             
             case "NT":
             if ($address_pin[0] != "0") {
-                $error_msg .= "<p class='center_allign'>INVALID pin code!</p>\n";
+                $errMsg .= "<p class='center_allign'>INVALID pin code!</p>\n";
             }
             break;
             
             case "ACT":
             if ($address_pin[0] != "0") {
-                $error_msg .= "<p class='center_allign'>INVALID pin code!</p>\n";
+                $errMsg .= "<p class='center_allign'>INVALID pin code!</p>\n";
             }
             break;
          
             case "NSW":
             if ($address_pin[0] != "1" && $address_pin[0] != "2") {
-                $error_msg .= "<p class='center_allign'>INVALID pin code!</p>\n";
+                $errMsg .= "<p class='center_allign'>INVALID pin code!</p>\n";
             }
             break;
             }
         }
          
-        $seats_respective_seq = sanitise_input($_POST["seats_respective_seq"]);
-        if ($seats_respective_seq == "") {
-            $error_msg .= "<p class='center_allign'>Please select some seats</p>\n";
+        $seats = sanitise_input($_POST["seats"]);
+        if ($seats <= 0) {
+            $errMsg .= "<p class='center_allign'>Please select some seats</p>\n";
         }
               
-        $destinations = sanitise_input($_POST["destinations"]);
-        if ( $destinations == "" ) {
-            $error_msg .= "<p class='center_allign'>Please select a destinations.</p>\n";
+        $destination = sanitise_input($_POST["destination"]);
+        if ( $destination == "" ) {
+            $errMsg .= "<p class='center_allign'>Please select a destination.</p>\n";
         }
-        
-        $total_price = sanitise_input();
         
         $card = sanitise_input($_POST["card"]);	
         if ($card == "none") {
-            $error_msg .= "<p class='center_allign'>Please select your card type.</p>\n";
+            $errMsg .= "<p class='center_allign'>Please select your card type.</p>\n";
         }
          
         $card_name = sanitise_input($_POST["card_name"]);	
         if ($card_name == "") {
             $card_name = $firstname + $lastname;
         } else if (!preg_match("/^[a-zA-Z ]{1,40}$/", $card_name)) {
-            $error_msg .= "<p class='center_allign'>Card name must contains only alphabetical characters!</p>\n";
+            $errMsg .= "<p class='center_allign'>Card name must contains only alphabetical characters!</p>\n";
         }
          
         $card_number = sanitise_input($_POST["card_number"]);
         if ($card_number == "") {
-            $error_msg .= "<p class='center_allign'>Please enter your card number.</p>\n";
+            $errMsg .= "<p class='center_allign'>Please enter your card number.</p>\n";
         } else {
             switch ($card) {
-            case "Visa":
-            if (($card_number[0] != "4") || (!preg_match("/^\d{16}$/", $card_number))) {
-               $error_msg .= "<p class='center_allign'>INVALID card number!</p>\n";
-            }
-            break;
+                case "Visa":
+                if (($card_number[0] != "4") || (!preg_match("/^\d{16}$/", $card_number))) {
+                   $errMsg .= "<p class='center_allign'>INVALID card number!</p>\n";
+                }
+                break;
 
-            case "Mastercard":
-            if ((!($card_number[0] == "5" && ($card_number[1] >= 1 && $card_number[1] <= 5))) || (!preg_match("/^\d{16}$/", $card_number))) {
-               $error_msg .= "<p class='center_allign'>INVALID card number!</p>\n";
-            }
-            break;
+                case "Mastercard":
+                if ((!($card_number[0] == "5" && ($card_number[1] >= 1 && $card_number[1] <= 5))) || (!preg_match("/^\d{16}$/", $card_number))) {
+                   $errMsg .= "<p class='center_allign'>INVALID card number!</p>\n";
+                }
+                break;
 
-            case "American Express":
-            if ((!($card_number[0] == "3" && ($card_number[1] == "4" || $card_number[1] == "7"))) || (!preg_match("/^\d{15}$/", $card_number))) {
-                $error_msg .= "<p class='center_allign'>INVALID card number!</p>\n";
-            }
-            break;
+                case "American Express":
+                if ((!($card_number[0] == "3" && ($card_number[1] == "4" || $card_number[1] == "7"))) || (!preg_match("/^\d{15}$/", $card_number))) {
+                    $errMsg .= "<p class='center_allign'>INVALID card number!</p>\n";
+                }
+                break;
             }
         }
            
         $cvv = sanitise_input($_POST["cvv"]);			
         if ($cvv == "") {
-            $error_msg .= "<p class='center_allign'>Please enter Card CVV number</p>\n";
+            $errMsg .= "<p class='center_allign'>Please enter Card CVV number</p>\n";
         } else if (!preg_match("/^\d{3}$/", $cvv)) {
-            $error_msg .= "<p class='center_allign'>INVALID CVV!</p>\n";
+            $errMsg .= "<p class='center_allign'>INVALID CVV!</p>\n";
         }
         
         $exp_date = sanitise_input($_POST["exp_date"]);			
         if (!preg_match("/^\d{2}\-\d{2}$/" , $exp_date)) {
-            $error_msg .= "<p class='center_allign'>INVALID Exp Month-Year format!</p>\n";
+            $errMsg .= "<p class='center_allign'>INVALID Exp Month-Year format!</p>\n";
         }
+
+        $cost = sanitise_input($_POST["cost"]);
+        $totalPrice = (int)$cost * (int)$seats;
         
         $_SESSION["firstname"] = $firstname;
         $_SESSION["lastname"] = $lastname;
@@ -200,8 +202,8 @@
         $_SESSION["email"] = $email;
         $_SESSION["phone"] = $phone;
         $_SESSION["communication_method"] = $communication_method;
-        $_SESSION["seats_respective_seq"] = $seats_respective_seq;
-        $_SESSION["destinations"] = $destinations;
+        $_SESSION["seats"] = $seats;
+        $_SESSION["destination"] = $destination;
         $_SESSION["totalPrice"] = $totalPrice;
         $_SESSION["card"] = $card;
         $_SESSION["card_name"] = $card_name;
@@ -210,8 +212,8 @@
         $_SESSION["cvv"] = $cvv;
         $_SESSION["feedback"] = $feedback;
          
-        if ($error_msg != "") { 
-            $_SESSION["errMsg"] = $error_msg;
+        if ($errMsg != "") { 
+            $_SESSION["errMsg"] = $errMsg;
             header("location:fix_order.php");
             exit();
         }
@@ -238,8 +240,8 @@
                     `address_state` text NOT NULL,
                     `address_pin` int(4) NOT NULL,
                     `communication_method` enum('Post', 'Email', 'Phone') NOT NULL,
-                    `destinations` text NOT NULL,
-                    `seats_respective_seq` text NOT NULL,
+                    `destination` text NOT NULL,
+                    `seats` text NOT NULL,
                     `total_price` float NOT NULL,
                     `card` enum('American Express','Mastercard','Visa') NOT NULL,
                     `card_name` text NOT NULL,
@@ -255,10 +257,10 @@
         } 
         
         $query = "INSERT INTO $orders (`first_name`,`last_name`,`address_street`,`address_suburb`,`address_state`,
-            `address_pin`,`phone`,`email`,`communication_method`, `destinations`,`seats_respective_seq`,`total_price`,
+            `address_pin`,`phone`,`email`,`communication_method`, `destination`,`seats`,`total_price`,
             `card`,`card_name`,`card_number`,`exp_date`,`cvv`,`feedback`) VALUES ('$firstname','$lastname',
             '$address_street','$address_suburb','$address_state','$address_pin','$phone','$email','$communication_method',
-            '$destinations','$seats_respective_seq','$total_price','$card','$card_name','$card_number','$exp_date','$cvv',
+            '$destination','$seats','$total_price','$card','$card_name','$card_number','$exp_date','$cvv',
             '$feedback' );";
          
            

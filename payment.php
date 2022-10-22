@@ -28,30 +28,16 @@
         </div>
     </section>
 
-    <section>
-        <h3>Your Cart</h3>
-        <aside id="flight_destination_list">
-            <ul id="confirm_add_place">
-                <li><strong>Destination</strong></li>
-            </ul>
-        </aside>
-
-        <aside id="flight_seats_list">
-            <ul id="confirm_add_seats">
-                <li><strong>Total Tickets</strong></li>
-            </ul>
-        </aside>
-
-        <aside id="flight_cost_list">
-            <ul id="confirm_add_costs">
-                <li><strong>Total Cost</strong></li>
-            </ul>
-        </aside>
+    <article>
+        <h3>Reserved Flights for</h3>
+        <span id="show_goto"></span>
+        <span id="show_cost"></span>
+        <span id="show_seats"></span>
         
         <div id="price_total">
-            <strong>Total:  </strong><span id="total_cost"></span>
+            <strong>Total:  A$</strong><span id="total_cost"></span>
         </div>
-    </section>
+    </article>
 
     <section>
         <h3>Make your Payment!</h3>
@@ -102,8 +88,9 @@
                 <input type="hidden" name="address_pin" id="address_pin">
                 <input type="hidden" name="address_state" id="address_state">
                 <input type="hidden" name="feedback" id="feedback">
-                <input type="hidden" name="destinations" id="destinations">
-                <input type="hidden" name="seats_respective_seq" id="seats">
+                <input type="hidden" name="destination" id="destination">
+                <input type="hidden" name="seats" id="seats">
+                <input type="hidden" name="cost" id="cost">
             </fieldset>
 
             <input type="submit" value="Checkout!" class="form_button"/>;
