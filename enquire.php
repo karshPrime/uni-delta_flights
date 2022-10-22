@@ -10,11 +10,11 @@
             <legend>About you</legend>
             <p>
                 <label for="fname">First Name: </label>
-                <input type="text" name="fname" id="fname" pattern="[A-Za-z]{1,25}" placeholder="Joe" required>
+                <input type="text" name="fname" id="fname" placeholder="Joe" required>
             </p>
             <p>
                 <label for="lname">Last Name: </label>
-                <input type="text" name="lname" id="lname" pattern="[A-Za-z]{1,25}" placeholder="Smith" required>
+                <input type="text" name="lname" id="lname" placeholder="Smith" required>
             </p>
             <p>
                 <label for="email">Email: </label>
@@ -22,7 +22,7 @@
             </p>
             <p>
                 <label for="phone">Phone No.</label>
-                <input type="text" id="phone" name="phone" placeholder="+61 4xxx xxx xxx" pattern="[0-9]{9,10}" required>
+                <input type="text" id="phone" name="phone" placeholder="+61 4xxx xxx xxx" required>
             </p>
             <br>
             <p>
@@ -43,11 +43,11 @@
             <legend>Address</legend>
             <p>
                 <label for="adr_st">Street: </label>
-                <input type="text" id="adr_st" name="adr_st" placeholder="20 Flinder St." maxlength="40" required>
+                <input type="text" id="adr_st" name="adr_st" placeholder="20 Flinder St." required>
             </p>
             <p>
                 <label for="adr_sub">Suburb/Town:</label>
-                <input type="text" name="adr_sub" id="adr_sub" placeholder="Melbourne" maxlength="20" required>
+                <input type="text" name="adr_sub" id="adr_sub" placeholder="Melbourne" required>
             </p>
             <p>
                 <label for="adr_state">State:</label>
@@ -65,7 +65,7 @@
             </p>
             <p>
                 <label for="adr_postcode">Postcode:</label>
-                <input type="text" id="adr_postcode" placeholder="1234" pattern="[0-9]{4}" required>
+                <input type="text" id="adr_postcode" placeholder="1234" required>
             </p>
         </fieldset>
         
