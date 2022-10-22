@@ -6,9 +6,8 @@
     <h1>About Us</h1>
     <p><strong>Delta Flight Booking</strong> Program was started by <strong>Utkarsh KR</strong> as part of his 
     <a href="https://www.swinburne.edu.au/study/courses/units/Creating-Web-Applications-COS60004/local">COS10011: Creating Web Applications</a>
-    Assignment 1 submission. No line of code in this program, other than "<a href="enquire.html">contact us</a>" form's backend php, 
-    has been written by anyone else other than Utkarsh himself. Additionally, all media used in this product are 100% royalty free by their 
-    respective artists who are all credited bellow.</p>
+    Assignment 1 submission. No line of code in this program,has been written by anyone else other than Utkarsh himself. Additionally, all media
+    used in this product are 100% royalty free by their respective artists who are all credited bellow.</p>
     <br><br>
 
     <h2>Developer</h2>
