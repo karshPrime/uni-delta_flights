@@ -7,80 +7,86 @@
 
 /* ]====================[ validate entered data ]====================[ */
 function validate() {
-    let validated = true;
-    let error_msg = "";
+    let validation_required = false;
+    if (validation_required) {
+        let validated = true;
+        let error_msg = "";
 
-    // check for if name on card is different
-    let card_name = document.getElementById("card_name").value;
-    /*************************** Enhancement 1a ***************************/ 
-    if (card_name == undefined || card_name.length < 1) {
-        document.getElementById("card_name").value = sessionStorage.fname + ' ' + sessionStorage.lname;
-    } else if (card_name.length > 40) {
-        error_msg += "Name should be smaller than 40characters.\n";
-        validated = false;
-    } else if (!(/^[a-zA-Z ]+$/.test(card_name))) {
-        error_msg += "name can only have letters and spaces.\n"
-        validated = false;
-    }
-    
-    // cross check entered card number with card type
-    let card_number = document.getElementById("card_number").value;
-    let required_digit;
-    if (card_number == undefined || card_number == 0 || isNaN(card_number)) {
-        error_msg += "INVALID CARD NUMBER\n";
-        validated = false;
-
-    } else if (document.getElementById("mastercard").checked) {
-        required_digit = Math.floor(card_number/Math.pow(10, 15));
-        if ((card_number.length == 16) && (required_digit == 4)) {
-            sessionStorage.card_type = "Mastercard";
-        } else {
-            error_msg += "INVALID CARD NUMBER\n";
+        // check for if name on card is different
+        let card_name = document.getElementById("card_name").value;
+        /*************************** Enhancement 1a ***************************/ 
+        if (card_name == undefined || card_name.length < 1) {
+            document.getElementById("card_name").value = sessionStorage.fname + ' ' + sessionStorage.lname;
+        } else if (card_name.length > 40) {
+            error_msg += "Name should be smaller than 40characters.\n";
             validated = false;
-        }
-    
-    } else if (document.getElementById("visa").checked) {
-        required_digit = Math.floor(card_number/Math.pow(10, 14));
-        if ((card_number.length == 16) && (required_digit >= 51) && (required_digit <= 55)) {
-            sessionStorage.card_type = "Visa";
-        } else {
-            error_msg += "INVALID CARD NUMBER\n";
+        } else if (!(/^[a-zA-Z ]+$/.test(card_name))) {
+            error_msg += "name can only have letters and spaces.\n"
             validated = false;
         }
 
-    } else if (document.getElementById("american_exp").checked) {
-        required_digit = Math.floor(card_number/Math.pow(10, 13));
-        if ((card_number.length == 15) && (required_digit == 34 || required_digit == 37)) {
-            sessionStorage.card_type = "American Express";
-        } else {
+        // cross check entered card number with card type
+        let card_number = document.getElementById("card_number").value;
+        let required_digit;
+        if (card_number == undefined || card_number == 0 || isNaN(card_number)) {
             error_msg += "INVALID CARD NUMBER\n";
+            validated = false;
+
+        } else if (document.getElementById("mastercard").checked) {
+            required_digit = Math.floor(card_number/Math.pow(10, 15));
+            if ((card_number.length == 16) && (required_digit == 4)) {
+                sessionStorage.card_type = "Mastercard";
+            } else {
+                error_msg += "INVALID CARD NUMBER\n";
+                validated = false;
+            }
+        
+        } else if (document.getElementById("visa").checked) {
+            required_digit = Math.floor(card_number/Math.pow(10, 14));
+            if ((card_number.length == 16) && (required_digit >= 51) && (required_digit <= 55)) {
+                sessionStorage.card_type = "Visa";
+            } else {
+                error_msg += "INVALID CARD NUMBER\n";
+                validated = false;
+            }
+
+        } else if (document.getElementById("american_exp").checked) {
+            required_digit = Math.floor(card_number/Math.pow(10, 13));
+            if ((card_number.length == 15) && (required_digit == 34 || required_digit == 37)) {
+                sessionStorage.card_type = "American Express";
+            } else {
+                error_msg += "INVALID CARD NUMBER\n";
+                validated = false;
+            }
+
+        } else {
+            validated = false;
+            error_msg += "Select your card type.\n";
+        }
+
+        // cvv check
+        let cvv = document.getElementById("cvv").value;
+        if (cvv < 99 || cvv > 1000 || cvv == undefined || isNaN(cvv)) {
+            error_msg += "invalid cvv.\n";
             validated = false;
         }
 
+        // date format
+        let exp_date = document.getElementById("exp_date").value.split('-');
+        if (exp_date[0] > 12 || exp_date[0] < 0 || exp_date[1] < 22) {
+            error_msg += "Invalid Card expire date.\n";
+            validated = false;
+        } else if (exp_date.length != 2) {
+            error_msg += "Please enter card expire details.\n";
+            validated = false;
+        }
+
+        if (error_msg != "") {
+            alert(error_msg);
+        }
     } else {
-        validated = false;
-        error_msg += "Select your card type.\n";
-    }
-
-    // cvv check
-    let cvv = document.getElementById("cvv").value;
-    if (cvv < 99 || cvv > 1000 || cvv == undefined || isNaN(cvv)) {
-        error_msg += "invalid cvv.\n";
-        validated = false;
-    }
-
-    // date format
-    let exp_date = document.getElementById("exp_date").value.split('-');
-    if (exp_date[0] > 12 || exp_date[0] < 0 || exp_date[1] < 22) {
-        error_msg += "Invalid Card expire date.\n";
-        validated = false;
-    } else if (exp_date.length != 2) {
-        error_msg += "Please enter card expire details.\n";
-        validated = false;
-    }
-
-    if (error_msg != "") {
-        alert(error_msg);
+        // skip js validation
+        validate = true;
     }
 
     return validated;
@@ -179,7 +185,7 @@ function init() {
     selected_flights(flight_destinations);
 
     document.getElementById("financial_form").onsubmit = validate;
-    document.getElementById("financial_form").onreset= cancel_booking;
+    document.getElementById("financial_form").onreset = cancel_booking;
     document.getElementById("scroll_up").onclick = scroll_up;
 }
 
