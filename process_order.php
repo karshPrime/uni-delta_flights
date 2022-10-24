@@ -25,14 +25,14 @@
         $errMsg = ""; // error message identifier
 
 
-        // redirect to enquire if opened this website directly
+        // redirect to enquire if opened this website from link
         if (!isset($_POST["firstname"]) && !isset($_SESSION["firstname"])) {
             header("location:enquire.php");
             exit();
         };
 
 
-        // Sanitization ==========================================
+        // Sanitization
         $firstname = sanitise_input($_POST["firstname"]);
         if (!preg_match("/^[a-zA-Z]{1,25}+$/", $firstname)) {
             $errMsg .= "<p class='center_allign'>INVALID First name!</p>\n";
@@ -191,7 +191,7 @@
         }
 
         $cost = sanitise_input($_POST["cost"]);
-        $totalPrice = (int)$cost * (int)$seats;
+        $total_price = (int)$cost * (int)$seats;
         
         $_SESSION["firstname"] = $firstname;
         $_SESSION["lastname"] = $lastname;
@@ -204,7 +204,7 @@
         $_SESSION["communication_method"] = $communication_method;
         $_SESSION["seats"] = $seats;
         $_SESSION["destination"] = $destination;
-        $_SESSION["totalPrice"] = $totalPrice;
+        $_SESSION["total_price"] = $total_price;
         $_SESSION["card"] = $card;
         $_SESSION["card_name"] = $card_name;
         $_SESSION["card_number"] = $card_number;
